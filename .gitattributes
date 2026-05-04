@@ -1,0 +1,34 @@
+# Handle line endings automatically for files detected as text 
+# and truly force LF for all text files upon checkin.
+* text=auto
+
+# Core Source Files - Force LF in repository
+*.java text
+*.js text
+*.jsx text
+*.css text
+*.html text
+*.json text
+*.md text
+*.xml text
+*.properties text
+*.yml text
+*.yaml text
+
+# Scripts - Force LF for Linux compatibility
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# Build Wrappers
+mvnw text eol=lf
+mvnw.cmd text eol=crlf
+
+# Binary Files - Prevent any modification
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+*.pdf binary
+*.jar binary
