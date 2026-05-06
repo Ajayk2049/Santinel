@@ -20,4 +20,5 @@ public class PingLog {
     private Instant timestamp;
     private long responseTimeMs;
     private int statusCode;
+    private String message;
 }

@@ -19,4 +19,5 @@ public class ServiceStatusDTO {
     private double avgResponseTime;
     private String lastTimestamp;
     private String status; // UP/DOWN
+    private String lastMessage;
 }

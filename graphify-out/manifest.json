@@ -16,24 +16,24 @@
     "hash": "6dba37f527a68e4ace7908bbbcea1f50"
   },
   "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\controllers\\ServiceController.java": {
-    "mtime": 1777979713.2534833,
-    "hash": "46b578273f12fcb3f15adc7759ee8584"
+    "mtime": 1778052045.5359738,
+    "hash": "5171dc192a0d30b42a259bef72107137"
   },
   "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\dto\\ServiceStatusDTO.java": {
-    "mtime": 1777979703.850527,
-    "hash": "38d2bc118716872cd37ccfd2a1e55af8"
+    "mtime": 1778047169.7108483,
+    "hash": "9a9cb8a4e0644697fefdbd79df457f22"
   },
-  "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\engine\\TelemetryEngineService.java": {
-    "mtime": 1777979692.637452,
-    "hash": "e03799e9efe39a5a1d389fc3973d2436"
+  "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\engine\\ApiMonitor.java": {
+    "mtime": 1778052035.0819664,
+    "hash": "12ab1c0b69d071901245a10b16fba62b"
   },
   "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\models\\MonitoredService.java": {
-    "mtime": 1777979674.961421,
-    "hash": "001a9c23e779f1e43770fa2cfb212096"
+    "mtime": 1778052023.1124372,
+    "hash": "9834fca482aa480c7e6c90a3851eb6dd"
   },
   "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\models\\PingLog.java": {
-    "mtime": 1777816353.715014,
-    "hash": "0bb0a3859f8c657678902cff39cf8e5e"
+    "mtime": 1778047163.087168,
+    "hash": "af362e5e3966c8fe50b79df854a36470"
   },
   "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\models\\User.java": {
     "mtime": 1777816342.398856,
@@ -83,6 +83,10 @@
     "mtime": 1777979741.704559,
     "hash": "03287b7c35da813fc7246264192b2236"
   },
+  "A:\\Projects\\Santinel\\frontend\\src\\components\\ServiceRow.jsx": {
+    "mtime": 1778052105.5303702,
+    "hash": "28c0970a8f76c0dab877b0fa17fba044"
+  },
   "A:\\Projects\\Santinel\\frontend\\src\\components\\theme-provider.jsx": {
     "mtime": 1777816905.3134978,
     "hash": "7a84ed647fb596c08551e29c18f31ae4"
@@ -96,8 +100,8 @@
     "hash": "eff53006b93cfdef4aef148f202f1c3c"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\pages\\Dashboard.jsx": {
-    "mtime": 1777979731.2074237,
-    "hash": "738552a28650f3f4e36abe87c606b58c"
+    "mtime": 1778053366.5548604,
+    "hash": "9d02548942b09c5d5b7e0750efe6232f"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\pages\\Home.jsx": {
     "mtime": 1777876847.3119268,
@@ -108,16 +112,16 @@
     "hash": "cda285e217e57dc018e66a1270f5fb52"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\store\\fleetSlice.js": {
-    "mtime": 1777979325.2458086,
-    "hash": "530f6de62dc6a1b96e59a6ff8beae0f8"
+    "mtime": 1778053348.4104762,
+    "hash": "5034035188c183802995aaf392434b9f"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\store\\index.js": {
     "mtime": 1777817968.1537654,
     "hash": "34d4406827a9e1d77fc346b2f1aad9e1"
   },
   "A:\\Projects\\Santinel\\progress.md": {
-    "mtime": 1777885621.5919034,
-    "hash": "6d59357e65b0a7fc9f50f38db9cbf2bb"
+    "mtime": 1778053513.415692,
+    "hash": "ca4a8ba5116601c4af9c9e51c1196bca"
   },
   "A:\\Projects\\Santinel\\README.md": {
     "mtime": 1777978390.7110543,

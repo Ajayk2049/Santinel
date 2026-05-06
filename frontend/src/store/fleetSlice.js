@@ -16,11 +16,28 @@ export const fetchServices = createAsyncThunk('fleet/fetchServices', async (_, {
 export const addService = createAsyncThunk('fleet/addService', async (serviceData, { getState }) => {
     const { auth } = getState();
     const url = `${API_BASE}/api/services`;
-    console.log("Executing protocol add at:", url, "Data:", serviceData, "Token present:", !!auth.token);
     const response = await axios.post(url, serviceData, {
         headers: { Authorization: `Bearer ${auth.token}` }
     });
     return response.data;
+});
+
+export const deleteService = createAsyncThunk('fleet/deleteService', async (id, { getState }) => {
+    const { auth } = getState();
+    const url = `${API_BASE}/api/services/${id}`;
+    await axios.delete(url, {
+        headers: { Authorization: `Bearer ${auth.token}` }
+    });
+    return id;
+});
+
+export const retryPing = createAsyncThunk('fleet/retryPing', async (id, { getState }) => {
+    const { auth } = getState();
+    const url = `${API_BASE}/api/services/${id}/retry`;
+    await axios.post(url, {}, {
+        headers: { Authorization: `Bearer ${auth.token}` }
+    });
+    return id;
 });
 
 const fleetSlice = createSlice({
@@ -47,9 +64,8 @@ const fleetSlice = createSlice({
             .addCase(addService.fulfilled, (state, action) => {
                 state.services.push(action.payload);
             })
-            .addCase(addService.rejected, (state, action) => {
-                state.error = action.error.message;
-                console.error("Add Service Failed:", action.error.message);
+            .addCase(deleteService.fulfilled, (state, action) => {
+                state.services = state.services.filter(s => s.id !== action.payload);
             });
     },
 });

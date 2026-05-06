@@ -1,7 +1,7 @@
 package com.sentinel.controllers;
 
 import com.sentinel.dto.ServiceStatusDTO;
-import com.sentinel.engine.TelemetryEngineService;
+import com.sentinel.engine.ApiMonitor;
 import com.sentinel.models.MonitoredService;
 import com.sentinel.models.PingLog;
 import com.sentinel.models.User;
@@ -11,6 +11,7 @@ import com.sentinel.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -24,14 +25,14 @@ public class ServiceController {
     private final MonitoredServiceRepository serviceRepository;
     private final PingLogRepository pingLogRepository;
     private final UserRepository userRepository;
-    private final TelemetryEngineService telemetryEngineService;
+    private final ApiMonitor apiMonitor;
 
     private String getCurrentUserId() {
         String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         return userRepository.findByEmail(email).map(User::getId).orElse(null);
     }
 
-    @GetMapping
+    @GetMapping("/status")
     public List<ServiceStatusDTO> getServices() {
         String userId = getCurrentUserId();
         return serviceRepository.findByUserId(userId).stream()
@@ -56,6 +57,7 @@ public class ServiceController {
                         builder.lastStatusCode(latest.getStatusCode())
                                .lastResponseTimeMs(latest.getResponseTimeMs())
                                .lastTimestamp(latest.getTimestamp().toString())
+                               .lastMessage(latest.getMessage())
                                .status(latest.getStatusCode() >= 200 && latest.getStatusCode() < 300 ? "UP" : "DOWN");
                     } else {
                         builder.status("DOWN");
@@ -72,12 +74,24 @@ public class ServiceController {
         service.setUserId(userId);
         service.setActive(true);
         MonitoredService saved = serviceRepository.save(service);
-        telemetryEngineService.executePingProtocol(saved);
+        apiMonitor.scheduleService(saved);
         return saved;
     }
 
     @DeleteMapping("/{id}")
-    public void deleteService(@PathVariable String id) {
+    public ResponseEntity<?> deleteService(@PathVariable String id) {
+        apiMonitor.stopService(id);
         serviceRepository.deleteById(id);
+        // Also delete associated logs
+        pingLogRepository.findByServiceIdOrderByTimestampDesc(id).forEach(log -> pingLogRepository.delete(log));
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/{id}/retry")
+    public ResponseEntity<?> retryPing(@PathVariable String id) {
+        return serviceRepository.findById(id).map(service -> {
+            apiMonitor.executePingProtocol(service);
+            return ResponseEntity.ok().build();
+        }).orElse(ResponseEntity.notFound().build());
     }
 }

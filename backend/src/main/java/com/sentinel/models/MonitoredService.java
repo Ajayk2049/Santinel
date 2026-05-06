@@ -22,4 +22,6 @@ public class MonitoredService {
     private boolean isActive;
     @Builder.Default
     private Instant createdAt = Instant.now();
+    @Builder.Default
+    private Integer pingInterval = 30;
 }

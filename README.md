@@ -7,6 +7,19 @@ Sentinel is a high-performance, mission-critical API monitoring platform designe
 
 ---
 
+## 📸 Interface Preview
+
+<p align="center">
+  <img src="Screenshots/1.png" width="45%" alt="Sentinel Landing" />
+  <img src="Screenshots/4.png" width="45%" alt="Mission Control Dashboard" />
+</p>
+<p align="center">
+  <img src="Screenshots/3.png" width="45%" alt="Operator Login" />
+  <img src="Screenshots/2.png" width="45%" alt="Join the Fleet" />
+</p>
+
+---
+
 ## 🛠️ Tech Stack
 
 ### Backend Infrastructure

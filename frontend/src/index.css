@@ -27,7 +27,7 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%; /* Pure Dark */
+    --background: 0 0% 0%; /* Pitch Black */
     --foreground: 210 20% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 210 20% 98%;
@@ -37,7 +37,7 @@
     --primary-foreground: 224 71.4% 4.1%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 210 20% 98%;
-    --muted: 240 3.7% 15.9%;
+    --muted: 240 5% 10%;
     --muted-foreground: 240 5% 64.9%;
     --accent: 174 75% 45%;
     --accent-foreground: 210 20% 98%;
