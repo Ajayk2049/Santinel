@@ -131,16 +131,6 @@ The backend utilizes a multi-threaded `@Scheduled` engine to ping registered API
 - **Google Protocol**: Frontend supports browser-native strong password suggestions during signup.
 - **Dynamic Identity**: Navbar extracts and displays operator handles from session tokens.
 
-### DarkVeil UI
-A premium interactive aesthetic featuring WebGL-based visual noise and mouse-responsive warp effects, ensuring a state-of-the-art monitoring experience.
-
----
-
-## 📜 Sentinel Protocol (Rules)
-- **Zero-Comments**: Production-ready raw code.
-- **Isolated Config**: All secrets are handled strictly via `.env`.
-- **Mission Critical**: Focused on performance and telemetry accuracy.
-
 ---
 
 *Sentinel | Real-Time Fleet Monitor & Incident Tracker | 2026*
