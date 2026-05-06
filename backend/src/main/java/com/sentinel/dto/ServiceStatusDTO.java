@@ -11,10 +11,12 @@ import lombok.NoArgsConstructor;
 @Builder
 public class ServiceStatusDTO {
     private String id;
-    private String alias;
+    private String name;
     private String url;
     private boolean isActive;
     private int lastStatusCode;
     private long lastResponseTimeMs;
+    private double avgResponseTime;
     private String lastTimestamp;
+    private String status; // UP/DOWN
 }

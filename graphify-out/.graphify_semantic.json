@@ -1,0 +1,103 @@
+{
+  "nodes": [
+    {
+      "id": "sentinel_system",
+      "label": "Sentinel API Fleet Monitor",
+      "file_type": "rationale",
+      "source_file": "README.md"
+    },
+    {
+      "id": "polling_engine",
+      "label": "Polling Engine",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/sentinel/engine/TelemetryEngineService.java"
+    },
+    {
+      "id": "auth_portal",
+      "label": "Auth Portal",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/sentinel/controllers/AuthController.java"
+    },
+    {
+      "id": "darkveil_ui",
+      "label": "DarkVeil UI",
+      "file_type": "rationale",
+      "source_file": "README.md"
+    },
+    {
+      "id": "mission_control",
+      "label": "Mission Control Dashboard",
+      "file_type": "rationale",
+      "source_file": "frontend/src/pages/Dashboard.jsx"
+    },
+    {
+      "id": "telemetry_strategy",
+      "label": "Dual-Layer Logging Strategy",
+      "file_type": "rationale",
+      "source_file": "README.md"
+    },
+    {
+      "id": "fleet_monitoring",
+      "label": "Real-Time Fleet Monitoring",
+      "file_type": "rationale",
+      "source_file": "progress.md"
+    },
+    {
+      "id": "hero_png",
+      "label": "Sentinel Hero Image",
+      "file_type": "image",
+      "source_file": "frontend/src/assets/hero.png"
+    },
+    {
+      "id": "favicon_svg",
+      "label": "Sentinel Wifi Logo (Favicon)",
+      "file_type": "image",
+      "source_file": "frontend/public/favicon.svg"
+    }
+  ],
+  "edges": [
+    {
+      "source": "polling_engine",
+      "target": "telemetry_strategy",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/sentinel/engine/TelemetryEngineService.java"
+    },
+    {
+      "source": "mission_control",
+      "target": "darkveil_ui",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/pages/Dashboard.jsx"
+    },
+    {
+      "source": "mission_control",
+      "target": "polling_engine",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/pages/Dashboard.jsx"
+    },
+    {
+      "source": "sentinel_system",
+      "target": "fleet_monitoring",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "README.md"
+    },
+    {
+      "source": "hero_png",
+      "target": "darkveil_ui",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "frontend/src/assets/hero.png"
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 1200,
+  "output_tokens": 800
+}

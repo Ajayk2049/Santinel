@@ -27,7 +27,7 @@ export default function Navbar({ onlyToggle, isLanding }) {
   if (onlyToggle) return null // Theme toggle removed as requested
 
   return (
-    <nav className="flex items-center justify-between px-10 py-8 bg-transparent sticky top-0 z-50 transition-all">
+    <nav className="flex items-center justify-between px-10 py-8 bg-transparent transition-all">
       <Link to="/" className="flex items-center gap-3 group">
         <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-[0_0_15px_rgba(20,184,166,0.4)] group-hover:scale-105 transition-transform">
           <Wifi className="w-6 h-6 text-primary-foreground" />

@@ -4,36 +4,33 @@ import com.sentinel.models.MonitoredService;
 import com.sentinel.models.PingLog;
 import com.sentinel.repositories.MonitoredServiceRepository;
 import com.sentinel.repositories.PingLogRepository;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.List;
 
-@Component
-public class PollingEngine {
-    private static final Logger logger = LoggerFactory.getLogger(PollingEngine.class);
+@Service
+@RequiredArgsConstructor
+public class TelemetryEngineService {
+    private static final Logger logger = LoggerFactory.getLogger(TelemetryEngineService.class);
     private final MonitoredServiceRepository serviceRepository;
     private final PingLogRepository pingLogRepository;
-    private final WebClient webClient;
+    private final WebClient webClient = WebClient.builder().build();
 
-    public PollingEngine(MonitoredServiceRepository serviceRepository, PingLogRepository pingLogRepository) {
-        this.serviceRepository = serviceRepository;
-        this.pingLogRepository = pingLogRepository;
-        this.webClient = WebClient.builder().build();
+    @Scheduled(fixedRate = 60000)
+    public void runTelemetryCycle() {
+        logger.info("Initiating fleet-wide telemetry cycle...");
+        List<MonitoredService> activeServices = serviceRepository.findByIsActiveTrue();
+        activeServices.forEach(this::executePingProtocol);
     }
 
-    @Scheduled(fixedRateString = "${POLLING_INTERVAL:60000}")
-    public void pollServices() {
-        List<MonitoredService> services = serviceRepository.findByIsActiveTrue();
-        services.forEach(this::pingService);
-    }
-
-    private void pingService(MonitoredService service) {
+    public void executePingProtocol(MonitoredService service) {
         long startTime = System.currentTimeMillis();
         webClient.get()
                 .uri(service.getUrl())
@@ -45,7 +42,6 @@ public class PollingEngine {
                             .responseTimeMs(endTime - startTime)
                             .statusCode(response.statusCode().value())
                             .build();
-                    logger.info("Ping SUCCESS: {} | Status: {} | Latency: {}ms", service.getUrl(), log.getStatusCode(), log.getResponseTimeMs());
                     return Mono.just(log);
                 })
                 .timeout(Duration.ofSeconds(10))
@@ -56,9 +52,12 @@ public class PollingEngine {
                             .responseTimeMs(System.currentTimeMillis() - startTime)
                             .statusCode(500)
                             .build();
-                    logger.error("Ping ERROR: {} | Reason: {}", service.getUrl(), e.getMessage());
                     return Mono.just(log);
                 })
-                .subscribe(pingLogRepository::save);
+                .subscribe(pingLog -> {
+                    pingLogRepository.save(pingLog);
+                    logger.info("Signal Captured: {} | Status: {} | Latency: {}ms", 
+                                service.getUrl(), pingLog.getStatusCode(), pingLog.getResponseTimeMs());
+                });
     }
 }
