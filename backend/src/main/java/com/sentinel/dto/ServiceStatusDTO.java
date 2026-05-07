@@ -20,4 +20,5 @@ public class ServiceStatusDTO {
     private String lastTimestamp;
     private String status; // UP/DOWN
     private String lastMessage;
+    private Double uptimePercentage;
 }

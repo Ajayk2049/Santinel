@@ -40,6 +40,24 @@ export const retryPing = createAsyncThunk('fleet/retryPing', async (id, { getSta
     return id;
 });
 
+export const updateService = createAsyncThunk('fleet/updateService', async ({ id, data }, { getState }) => {
+    const { auth } = getState();
+    const url = `${API_BASE}/api/services/${id}`;
+    const response = await axios.put(url, data, {
+        headers: { Authorization: `Bearer ${auth.token}` }
+    });
+    return response.data;
+});
+
+export const fetchIncidents = createAsyncThunk('fleet/fetchIncidents', async ({ id, page = 0, size = 10 }, { getState }) => {
+    const { auth } = getState();
+    const url = `${API_BASE}/api/services/${id}/incidents?page=${page}&size=${size}`;
+    const response = await axios.get(url, {
+        headers: { Authorization: `Bearer ${auth.token}` }
+    });
+    return response.data;
+});
+
 const fleetSlice = createSlice({
     name: 'fleet',
     initialState: {
@@ -66,6 +84,12 @@ const fleetSlice = createSlice({
             })
             .addCase(deleteService.fulfilled, (state, action) => {
                 state.services = state.services.filter(s => s.id !== action.payload);
+            })
+            .addCase(updateService.fulfilled, (state, action) => {
+                const index = state.services.findIndex(s => s.id === action.payload.id);
+                if (index !== -1) {
+                    state.services[index] = { ...state.services[index], ...action.payload };
+                }
             });
     },
 });

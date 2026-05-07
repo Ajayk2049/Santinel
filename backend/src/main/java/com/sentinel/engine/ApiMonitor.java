@@ -86,7 +86,7 @@ public class ApiMonitor {
                     .thenApply(response -> {
                         long endTime = System.currentTimeMillis();
                         String body = response.body();
-                        String message = (body != null && body.length() > 2000) ? body.substring(0, 2000) + "..." : (body != null ? body : "// No response body");
+                        String message = (body != null && !body.isEmpty()) ? body : "// No response body";
                         
                         return PingLog.builder()
                                 .serviceId(service.getId())

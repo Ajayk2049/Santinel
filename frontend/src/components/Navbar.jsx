@@ -1,7 +1,7 @@
 import { Wifi, User, LogOut } from "lucide-react"
 import { Link, useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { setToken } from "../store/authSlice"
+import { setToken, clearAuth } from "../store/authSlice"
 
 export default function Navbar({ onlyToggle, isLanding }) {
   const dispatch = useDispatch()
@@ -9,18 +9,20 @@ export default function Navbar({ onlyToggle, isLanding }) {
   const { token } = useSelector(state => state.auth)
 
   const getUserName = () => {
-    if (!token) return ""
+    if (!token || token === 'null') return ""
     try {
-      const payload = JSON.parse(atob(token.split('.')[1]))
-      const email = payload.sub || ""
-      return email.split('@')[0]
+      const parts = token.split('.');
+      if (parts.length !== 3) return "Operator";
+      const payload = JSON.parse(atob(parts[1]))
+      const email = payload.sub || payload.email || ""
+      return email.split('@')[0] || "Operator"
     } catch (e) {
       return "Operator"
     }
   }
 
   const handleLogout = () => {
-    dispatch(setToken(null))
+    dispatch(clearAuth())
     navigate('/')
   }
 

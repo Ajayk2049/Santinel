@@ -1,56 +1,4 @@
 {
-  "A:\\Projects\\Santinel\\backend\\mvnw": {
-    "mtime": 1777818340.9219675,
-    "hash": "da6c7e89f2da1e33da7d02d95021e753"
-  },
-  "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\SentinelApplication.java": {
-    "mtime": 1777820751.7638047,
-    "hash": "1d814b06221831de6bbcc81f811d8346"
-  },
-  "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\config\\SecurityConfig.java": {
-    "mtime": 1777818087.3368843,
-    "hash": "a866cbf29ed124435932fe58ff931b59"
-  },
-  "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\controllers\\AuthController.java": {
-    "mtime": 1777816421.221995,
-    "hash": "6dba37f527a68e4ace7908bbbcea1f50"
-  },
-  "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\controllers\\ServiceController.java": {
-    "mtime": 1778052045.5359738,
-    "hash": "5171dc192a0d30b42a259bef72107137"
-  },
-  "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\dto\\ServiceStatusDTO.java": {
-    "mtime": 1778047169.7108483,
-    "hash": "9a9cb8a4e0644697fefdbd79df457f22"
-  },
-  "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\engine\\ApiMonitor.java": {
-    "mtime": 1778052035.0819664,
-    "hash": "12ab1c0b69d071901245a10b16fba62b"
-  },
-  "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\models\\MonitoredService.java": {
-    "mtime": 1778052023.1124372,
-    "hash": "9834fca482aa480c7e6c90a3851eb6dd"
-  },
-  "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\models\\PingLog.java": {
-    "mtime": 1778047163.087168,
-    "hash": "af362e5e3966c8fe50b79df854a36470"
-  },
-  "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\models\\User.java": {
-    "mtime": 1777816342.398856,
-    "hash": "49db5274c0a237c14ef9c1d0f02aeed3"
-  },
-  "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\repositories\\MonitoredServiceRepository.java": {
-    "mtime": 1777816364.968164,
-    "hash": "c5676e461f879a2def18f8cc368c3017"
-  },
-  "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\repositories\\PingLogRepository.java": {
-    "mtime": 1777816370.5061586,
-    "hash": "911b055e85951c4826b9e7fb115857f7"
-  },
-  "A:\\Projects\\Santinel\\backend\\src\\main\\java\\com\\sentinel\\repositories\\UserRepository.java": {
-    "mtime": 1777816359.5841343,
-    "hash": "40b067e204d3d9f1793cfde92f0c1405"
-  },
   "A:\\Projects\\Santinel\\frontend\\eslint.config.js": {
     "mtime": 1777816603.6359124,
     "hash": "3aa4b57d7f08181d86bde52a4dcb7f22"
@@ -64,20 +12,24 @@
     "hash": "3084db399433ffd16085288ffd7b910e"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\App.jsx": {
-    "mtime": 1777883684.6211083,
-    "hash": "525fa34de076588b8dd4ac7b0a92649b"
+    "mtime": 1778063912.531638,
+    "hash": "3340f639080472c71865245190b46c4a"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\main.jsx": {
     "mtime": 1777816911.6556115,
     "hash": "455a3bbe76f0cf688ab8a493d11a3030"
+  },
+  "A:\\Projects\\Santinel\\frontend\\src\\components\\AuthLayout.jsx": {
+    "mtime": 1778064818.851585,
+    "hash": "987fcab3b49ccf45558325db95e85494"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\components\\DarkVeil.jsx": {
     "mtime": 1777869878.2627,
     "hash": "53f4b714a0fc601d94fa89073d63e046"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\components\\Navbar.jsx": {
-    "mtime": 1777978756.8449886,
-    "hash": "b829b98fb186fa009a005acc7227da04"
+    "mtime": 1778065380.923271,
+    "hash": "87cc96025ff39c5d1181c0d3be28cc59"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\components\\ServiceCard.jsx": {
     "mtime": 1777979741.704559,
@@ -107,9 +59,17 @@
     "mtime": 1777876847.3119268,
     "hash": "96f00fdb51176dd9803cc03753f46ac8"
   },
+  "A:\\Projects\\Santinel\\frontend\\src\\pages\\Login.jsx": {
+    "mtime": 1778063883.3887765,
+    "hash": "80d740e1eb2a7926946d380993dd1da7"
+  },
+  "A:\\Projects\\Santinel\\frontend\\src\\pages\\Signup.jsx": {
+    "mtime": 1778064912.8205853,
+    "hash": "be813c2182d022ea05dc0a7cf97bab39"
+  },
   "A:\\Projects\\Santinel\\frontend\\src\\store\\authSlice.js": {
-    "mtime": 1777817954.9117248,
-    "hash": "cda285e217e57dc018e66a1270f5fb52"
+    "mtime": 1778065372.8603666,
+    "hash": "468fbe37ce71b265c9dc939619e42496"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\store\\fleetSlice.js": {
     "mtime": 1778053348.4104762,
@@ -118,14 +78,6 @@
   "A:\\Projects\\Santinel\\frontend\\src\\store\\index.js": {
     "mtime": 1777817968.1537654,
     "hash": "34d4406827a9e1d77fc346b2f1aad9e1"
-  },
-  "A:\\Projects\\Santinel\\progress.md": {
-    "mtime": 1778053513.415692,
-    "hash": "ca4a8ba5116601c4af9c9e51c1196bca"
-  },
-  "A:\\Projects\\Santinel\\README.md": {
-    "mtime": 1777978390.7110543,
-    "hash": "c8ea6b6c493a7d7ff55dcdb451b5ca3c"
   },
   "A:\\Projects\\Santinel\\frontend\\index.html": {
     "mtime": 1777877914.9328842,

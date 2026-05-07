@@ -8,837 +8,919 @@
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/SentinelApplication.java",
       "source_location": "L1",
-      "id": "backend_src_main_java_com_sentinel_sentinelapplication_java",
-      "community": 10,
-      "norm_label": "sentinelapplication.java"
+      "community": 9,
+      "norm_label": "sentinelapplication.java",
+      "id": "backend_src_main_java_com_sentinel_sentinelapplication_java"
     },
     {
       "label": "SentinelApplication",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/SentinelApplication.java",
       "source_location": "L10",
-      "id": "sentinel_sentinelapplication_sentinelapplication",
-      "community": 10,
-      "norm_label": "sentinelapplication"
+      "community": 9,
+      "norm_label": "sentinelapplication",
+      "id": "sentinel_sentinelapplication_sentinelapplication"
     },
     {
       "label": ".main()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/SentinelApplication.java",
       "source_location": "L13",
-      "id": "sentinel_sentinelapplication_sentinelapplication_main",
-      "community": 10,
-      "norm_label": ".main()"
+      "community": 9,
+      "norm_label": ".main()",
+      "id": "sentinel_sentinelapplication_sentinelapplication_main"
     },
     {
       "label": "SecurityConfig.java",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/config/SecurityConfig.java",
       "source_location": "L1",
-      "id": "backend_src_main_java_com_sentinel_config_securityconfig_java",
-      "community": 3,
-      "norm_label": "securityconfig.java"
+      "community": 4,
+      "norm_label": "securityconfig.java",
+      "id": "backend_src_main_java_com_sentinel_config_securityconfig_java"
     },
     {
       "label": "SecurityConfig",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/config/SecurityConfig.java",
       "source_location": "L15",
-      "id": "config_securityconfig_securityconfig",
-      "community": 3,
-      "norm_label": "securityconfig"
+      "community": 4,
+      "norm_label": "securityconfig",
+      "id": "config_securityconfig_securityconfig"
     },
     {
       "label": ".SecurityConfig()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/config/SecurityConfig.java",
       "source_location": "L20",
-      "id": "config_securityconfig_securityconfig_securityconfig",
-      "community": 3,
-      "norm_label": ".securityconfig()"
+      "community": 4,
+      "norm_label": ".securityconfig()",
+      "id": "config_securityconfig_securityconfig_securityconfig"
     },
     {
       "label": ".filterChain()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/config/SecurityConfig.java",
       "source_location": "L24",
-      "id": "config_securityconfig_securityconfig_filterchain",
-      "community": 3,
-      "norm_label": ".filterchain()"
+      "community": 4,
+      "norm_label": ".filterchain()",
+      "id": "config_securityconfig_securityconfig_filterchain"
     },
     {
       "label": ".passwordEncoder()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/config/SecurityConfig.java",
       "source_location": "L45",
-      "id": "config_securityconfig_securityconfig_passwordencoder",
-      "community": 3,
-      "norm_label": ".passwordencoder()"
+      "community": 4,
+      "norm_label": ".passwordencoder()",
+      "id": "config_securityconfig_securityconfig_passwordencoder"
     },
     {
       "label": "AuthController.java",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/controllers/AuthController.java",
       "source_location": "L1",
-      "id": "backend_src_main_java_com_sentinel_controllers_authcontroller_java",
       "community": 1,
-      "norm_label": "authcontroller.java"
+      "norm_label": "authcontroller.java",
+      "id": "backend_src_main_java_com_sentinel_controllers_authcontroller_java"
     },
     {
       "label": "AuthController",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/controllers/AuthController.java",
       "source_location": "L13",
-      "id": "controllers_authcontroller_authcontroller",
       "community": 1,
-      "norm_label": "authcontroller"
+      "norm_label": "authcontroller",
+      "id": "controllers_authcontroller_authcontroller"
     },
     {
       "label": ".signup()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/controllers/AuthController.java",
       "source_location": "L21",
-      "id": "controllers_authcontroller_authcontroller_signup",
       "community": 1,
-      "norm_label": ".signup()"
+      "norm_label": ".signup()",
+      "id": "controllers_authcontroller_authcontroller_signup"
     },
     {
       "label": ".login()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/controllers/AuthController.java",
       "source_location": "L31",
-      "id": "controllers_authcontroller_authcontroller_login",
       "community": 1,
-      "norm_label": ".login()"
+      "norm_label": ".login()",
+      "id": "controllers_authcontroller_authcontroller_login"
     },
     {
       "label": "ServiceController.java",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L1",
-      "id": "backend_src_main_java_com_sentinel_controllers_servicecontroller_java",
       "community": 0,
-      "norm_label": "servicecontroller.java"
+      "norm_label": "servicecontroller.java",
+      "id": "backend_src_main_java_com_sentinel_controllers_servicecontroller_java"
     },
     {
       "label": "ServiceController",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L20",
-      "id": "controllers_servicecontroller_servicecontroller",
       "community": 0,
-      "norm_label": "servicecontroller"
+      "norm_label": "servicecontroller",
+      "id": "controllers_servicecontroller_servicecontroller"
     },
     {
       "label": ".getCurrentUserId()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L30",
-      "id": "controllers_servicecontroller_servicecontroller_getcurrentuserid",
       "community": 0,
-      "norm_label": ".getcurrentuserid()"
+      "norm_label": ".getcurrentuserid()",
+      "id": "controllers_servicecontroller_servicecontroller_getcurrentuserid"
     },
     {
       "label": ".getServices()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L35",
-      "id": "controllers_servicecontroller_servicecontroller_getservices",
       "community": 0,
-      "norm_label": ".getservices()"
+      "norm_label": ".getservices()",
+      "id": "controllers_servicecontroller_servicecontroller_getservices"
     },
     {
       "label": ".addService()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L71",
-      "id": "controllers_servicecontroller_servicecontroller_addservice",
       "community": 0,
-      "norm_label": ".addservice()"
+      "norm_label": ".addservice()",
+      "id": "controllers_servicecontroller_servicecontroller_addservice"
     },
     {
       "label": ".deleteService()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L81",
-      "id": "controllers_servicecontroller_servicecontroller_deleteservice",
       "community": 0,
-      "norm_label": ".deleteservice()"
+      "norm_label": ".deleteservice()",
+      "id": "controllers_servicecontroller_servicecontroller_deleteservice"
     },
     {
       "label": ".retryPing()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L90",
-      "id": "controllers_servicecontroller_servicecontroller_retryping",
       "community": 0,
-      "norm_label": ".retryping()"
+      "norm_label": ".retryping()",
+      "id": "controllers_servicecontroller_servicecontroller_retryping"
     },
     {
       "label": "ServiceStatusDTO.java",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/dto/ServiceStatusDTO.java",
       "source_location": "L1",
-      "id": "backend_src_main_java_com_sentinel_dto_servicestatusdto_java",
-      "community": 12,
-      "norm_label": "servicestatusdto.java"
+      "community": 11,
+      "norm_label": "servicestatusdto.java",
+      "id": "backend_src_main_java_com_sentinel_dto_servicestatusdto_java"
     },
     {
       "label": "ServiceStatusDTO",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/dto/ServiceStatusDTO.java",
       "source_location": "L8",
-      "id": "dto_servicestatusdto_servicestatusdto",
-      "community": 12,
-      "norm_label": "servicestatusdto"
+      "community": 11,
+      "norm_label": "servicestatusdto",
+      "id": "dto_servicestatusdto_servicestatusdto"
     },
     {
       "label": "ApiMonitor.java",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L1",
-      "id": "backend_src_main_java_com_sentinel_engine_apimonitor_java",
       "community": 0,
-      "norm_label": "apimonitor.java"
+      "norm_label": "apimonitor.java",
+      "id": "backend_src_main_java_com_sentinel_engine_apimonitor_java"
     },
     {
       "label": "ApiMonitor",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L27",
-      "id": "engine_apimonitor_apimonitor",
       "community": 0,
-      "norm_label": "apimonitor"
+      "norm_label": "apimonitor",
+      "id": "engine_apimonitor_apimonitor"
     },
     {
       "label": ".init()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L41",
-      "id": "engine_apimonitor_apimonitor_init",
-      "community": 4,
-      "norm_label": ".init()"
+      "community": 5,
+      "norm_label": ".init()",
+      "id": "engine_apimonitor_apimonitor_init"
     },
     {
       "label": ".cleanup()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L48",
-      "id": "engine_apimonitor_apimonitor_cleanup",
       "community": 0,
-      "norm_label": ".cleanup()"
+      "norm_label": ".cleanup()",
+      "id": "engine_apimonitor_apimonitor_cleanup"
     },
     {
       "label": ".scheduleService()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L55",
-      "id": "engine_apimonitor_apimonitor_scheduleservice",
       "community": 0,
-      "norm_label": ".scheduleservice()"
+      "norm_label": ".scheduleservice()",
+      "id": "engine_apimonitor_apimonitor_scheduleservice"
     },
     {
       "label": ".stopService()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L68",
-      "id": "engine_apimonitor_apimonitor_stopservice",
       "community": 0,
-      "norm_label": ".stopservice()"
+      "norm_label": ".stopservice()",
+      "id": "engine_apimonitor_apimonitor_stopservice"
     },
     {
       "label": ".executePingProtocol()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L76",
-      "id": "engine_apimonitor_apimonitor_executepingprotocol",
       "community": 0,
-      "norm_label": ".executepingprotocol()"
+      "norm_label": ".executepingprotocol()",
+      "id": "engine_apimonitor_apimonitor_executepingprotocol"
     },
     {
       "label": "MonitoredService.java",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/models/MonitoredService.java",
       "source_location": "L1",
-      "id": "backend_src_main_java_com_sentinel_models_monitoredservice_java",
-      "community": 13,
-      "norm_label": "monitoredservice.java"
+      "community": 12,
+      "norm_label": "monitoredservice.java",
+      "id": "backend_src_main_java_com_sentinel_models_monitoredservice_java"
     },
     {
       "label": "MonitoredService",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/models/MonitoredService.java",
       "source_location": "L11",
-      "id": "models_monitoredservice_monitoredservice",
-      "community": 13,
-      "norm_label": "monitoredservice"
+      "community": 12,
+      "norm_label": "monitoredservice",
+      "id": "models_monitoredservice_monitoredservice"
     },
     {
       "label": "PingLog.java",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/models/PingLog.java",
       "source_location": "L1",
-      "id": "backend_src_main_java_com_sentinel_models_pinglog_java",
-      "community": 14,
-      "norm_label": "pinglog.java"
+      "community": 13,
+      "norm_label": "pinglog.java",
+      "id": "backend_src_main_java_com_sentinel_models_pinglog_java"
     },
     {
       "label": "PingLog",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/models/PingLog.java",
       "source_location": "L11",
-      "id": "models_pinglog_pinglog",
-      "community": 14,
-      "norm_label": "pinglog"
+      "community": 13,
+      "norm_label": "pinglog",
+      "id": "models_pinglog_pinglog"
     },
     {
       "label": "User.java",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/models/User.java",
       "source_location": "L1",
-      "id": "backend_src_main_java_com_sentinel_models_user_java",
-      "community": 15,
-      "norm_label": "user.java"
+      "community": 14,
+      "norm_label": "user.java",
+      "id": "backend_src_main_java_com_sentinel_models_user_java"
     },
     {
       "label": "User",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/models/User.java",
       "source_location": "L14",
-      "id": "models_user_user",
-      "community": 15,
-      "norm_label": "user"
+      "community": 14,
+      "norm_label": "user",
+      "id": "models_user_user"
     },
     {
       "label": "MonitoredServiceRepository.java",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/repositories/MonitoredServiceRepository.java",
       "source_location": "L1",
-      "id": "backend_src_main_java_com_sentinel_repositories_monitoredservicerepository_java",
-      "community": 4,
-      "norm_label": "monitoredservicerepository.java"
+      "community": 5,
+      "norm_label": "monitoredservicerepository.java",
+      "id": "backend_src_main_java_com_sentinel_repositories_monitoredservicerepository_java"
     },
     {
       "label": "MonitoredServiceRepository",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/repositories/MonitoredServiceRepository.java",
       "source_location": "L7",
-      "id": "repositories_monitoredservicerepository_monitoredservicerepository",
-      "community": 4,
-      "norm_label": "monitoredservicerepository"
+      "community": 5,
+      "norm_label": "monitoredservicerepository",
+      "id": "repositories_monitoredservicerepository_monitoredservicerepository"
     },
     {
       "label": ".findByUserId()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/repositories/MonitoredServiceRepository.java",
       "source_location": "L8",
-      "id": "repositories_monitoredservicerepository_monitoredservicerepository_findbyuserid",
-      "community": 4,
-      "norm_label": ".findbyuserid()"
+      "community": 5,
+      "norm_label": ".findbyuserid()",
+      "id": "repositories_monitoredservicerepository_monitoredservicerepository_findbyuserid"
     },
     {
       "label": ".findByIsActiveTrue()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/repositories/MonitoredServiceRepository.java",
       "source_location": "L9",
-      "id": "repositories_monitoredservicerepository_monitoredservicerepository_findbyisactivetrue",
-      "community": 4,
-      "norm_label": ".findbyisactivetrue()"
+      "community": 5,
+      "norm_label": ".findbyisactivetrue()",
+      "id": "repositories_monitoredservicerepository_monitoredservicerepository_findbyisactivetrue"
     },
     {
       "label": "PingLogRepository.java",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/repositories/PingLogRepository.java",
       "source_location": "L1",
-      "id": "backend_src_main_java_com_sentinel_repositories_pinglogrepository_java",
-      "community": 6,
-      "norm_label": "pinglogrepository.java"
+      "community": 0,
+      "norm_label": "pinglogrepository.java",
+      "id": "backend_src_main_java_com_sentinel_repositories_pinglogrepository_java"
     },
     {
       "label": "PingLogRepository",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/repositories/PingLogRepository.java",
       "source_location": "L8",
-      "id": "repositories_pinglogrepository_pinglogrepository",
-      "community": 6,
-      "norm_label": "pinglogrepository"
+      "community": 0,
+      "norm_label": "pinglogrepository",
+      "id": "repositories_pinglogrepository_pinglogrepository"
     },
     {
       "label": ".findByServiceIdOrderByTimestampDesc()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/repositories/PingLogRepository.java",
       "source_location": "L9",
-      "id": "repositories_pinglogrepository_pinglogrepository_findbyserviceidorderbytimestampdesc",
-      "community": 6,
-      "norm_label": ".findbyserviceidorderbytimestampdesc()"
+      "community": 0,
+      "norm_label": ".findbyserviceidorderbytimestampdesc()",
+      "id": "repositories_pinglogrepository_pinglogrepository_findbyserviceidorderbytimestampdesc"
     },
     {
       "label": ".findFirstByServiceIdOrderByTimestampDesc()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/repositories/PingLogRepository.java",
       "source_location": "L10",
-      "id": "repositories_pinglogrepository_pinglogrepository_findfirstbyserviceidorderbytimestampdesc",
-      "community": 6,
-      "norm_label": ".findfirstbyserviceidorderbytimestampdesc()"
+      "community": 0,
+      "norm_label": ".findfirstbyserviceidorderbytimestampdesc()",
+      "id": "repositories_pinglogrepository_pinglogrepository_findfirstbyserviceidorderbytimestampdesc"
     },
     {
       "label": "UserRepository.java",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/repositories/UserRepository.java",
       "source_location": "L1",
-      "id": "backend_src_main_java_com_sentinel_repositories_userrepository_java",
       "community": 1,
-      "norm_label": "userrepository.java"
+      "norm_label": "userrepository.java",
+      "id": "backend_src_main_java_com_sentinel_repositories_userrepository_java"
     },
     {
       "label": "UserRepository",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/repositories/UserRepository.java",
       "source_location": "L7",
-      "id": "repositories_userrepository_userrepository",
       "community": 1,
-      "norm_label": "userrepository"
+      "norm_label": "userrepository",
+      "id": "repositories_userrepository_userrepository"
     },
     {
       "label": ".findByEmail()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/repositories/UserRepository.java",
       "source_location": "L8",
-      "id": "repositories_userrepository_userrepository_findbyemail",
       "community": 1,
-      "norm_label": ".findbyemail()"
+      "norm_label": ".findbyemail()",
+      "id": "repositories_userrepository_userrepository_findbyemail"
     },
     {
       "label": ".existsByEmail()",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/repositories/UserRepository.java",
       "source_location": "L9",
-      "id": "repositories_userrepository_userrepository_existsbyemail",
       "community": 1,
-      "norm_label": ".existsbyemail()"
+      "norm_label": ".existsbyemail()",
+      "id": "repositories_userrepository_userrepository_existsbyemail"
     },
     {
       "label": "eslint.config.js",
       "file_type": "code",
       "source_file": "frontend/eslint.config.js",
       "source_location": "L1",
-      "id": "frontend_eslint_config_js",
-      "community": 24,
-      "norm_label": "eslint.config.js"
+      "community": 26,
+      "norm_label": "eslint.config.js",
+      "id": "frontend_eslint_config_js"
     },
     {
       "label": "postcss.config.js",
       "file_type": "code",
       "source_file": "frontend/postcss.config.js",
       "source_location": "L1",
-      "id": "frontend_postcss_config_js",
-      "community": 25,
-      "norm_label": "postcss.config.js"
+      "community": 27,
+      "norm_label": "postcss.config.js",
+      "id": "frontend_postcss_config_js"
     },
     {
       "label": "vite.config.js",
       "file_type": "code",
       "source_file": "frontend/vite.config.js",
       "source_location": "L1",
-      "id": "frontend_vite_config_js",
-      "community": 26,
-      "norm_label": "vite.config.js"
+      "community": 28,
+      "norm_label": "vite.config.js",
+      "id": "frontend_vite_config_js"
     },
     {
       "label": "App.jsx",
       "file_type": "code",
       "source_file": "frontend/src/App.jsx",
       "source_location": "L1",
-      "id": "frontend_src_app_jsx",
-      "community": 5,
-      "norm_label": "app.jsx"
+      "community": 2,
+      "norm_label": "app.jsx",
+      "id": "frontend_src_app_jsx"
     },
     {
       "label": "ProtectedRoute()",
       "file_type": "code",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L14",
-      "id": "src_app_protectedroute",
-      "community": 5,
-      "norm_label": "protectedroute()"
+      "source_file": "App.jsx",
+      "source_location": "L9",
+      "community": 2,
+      "norm_label": "protectedroute()",
+      "id": "src_app_protectedroute"
     },
     {
       "label": "AppContent()",
       "file_type": "code",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L20",
-      "id": "src_app_appcontent",
-      "community": 5,
-      "norm_label": "appcontent()"
+      "source_file": "App.jsx",
+      "source_location": "L15",
+      "community": 2,
+      "norm_label": "appcontent()",
+      "id": "src_app_appcontent"
     },
     {
       "label": "AuthWrapper()",
       "file_type": "code",
       "source_file": "frontend/src/App.jsx",
       "source_location": "L90",
-      "id": "src_app_authwrapper",
-      "community": 5,
-      "norm_label": "authwrapper()"
+      "community": 2,
+      "norm_label": "authwrapper()",
+      "id": "src_app_authwrapper"
     },
     {
       "label": "App()",
       "file_type": "code",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L193",
-      "id": "src_app_app",
-      "community": 5,
-      "norm_label": "app()"
+      "source_file": "App.jsx",
+      "source_location": "L36",
+      "community": 2,
+      "norm_label": "app()",
+      "id": "src_app_app"
     },
     {
       "label": "main.jsx",
       "file_type": "code",
       "source_file": "frontend/src/main.jsx",
       "source_location": "L1",
-      "id": "frontend_src_main_jsx",
-      "community": 7,
-      "norm_label": "main.jsx"
+      "community": 6,
+      "norm_label": "main.jsx",
+      "id": "frontend_src_main_jsx"
     },
     {
       "label": "DarkVeil.jsx",
       "file_type": "code",
       "source_file": "frontend/src/components/DarkVeil.jsx",
       "source_location": "L1",
-      "id": "frontend_src_components_darkveil_jsx",
-      "community": 16,
-      "norm_label": "darkveil.jsx"
+      "community": 15,
+      "norm_label": "darkveil.jsx",
+      "id": "frontend_src_components_darkveil_jsx"
     },
     {
       "label": "DarkVeil()",
       "file_type": "code",
       "source_file": "frontend/src/components/DarkVeil.jsx",
       "source_location": "L53",
-      "id": "components_darkveil_darkveil",
-      "community": 16,
-      "norm_label": "darkveil()"
+      "community": 15,
+      "norm_label": "darkveil()",
+      "id": "components_darkveil_darkveil"
     },
     {
       "label": "Navbar.jsx",
       "file_type": "code",
       "source_file": "frontend/src/components/Navbar.jsx",
       "source_location": "L1",
-      "id": "frontend_src_components_navbar_jsx",
-      "community": 17,
-      "norm_label": "navbar.jsx"
+      "community": 10,
+      "norm_label": "navbar.jsx",
+      "id": "frontend_src_components_navbar_jsx"
     },
     {
       "label": "Navbar()",
       "file_type": "code",
-      "source_file": "frontend/src/components/Navbar.jsx",
+      "source_file": "components/Navbar.jsx",
       "source_location": "L6",
-      "id": "components_navbar_navbar",
-      "community": 17,
-      "norm_label": "navbar()"
+      "community": 10,
+      "norm_label": "navbar()",
+      "id": "components_navbar_navbar"
     },
     {
       "label": "ServiceCard.jsx",
       "file_type": "code",
       "source_file": "frontend/src/components/ServiceCard.jsx",
       "source_location": "L1",
-      "id": "frontend_src_components_servicecard_jsx",
-      "community": 18,
-      "norm_label": "servicecard.jsx"
+      "community": 16,
+      "norm_label": "servicecard.jsx",
+      "id": "frontend_src_components_servicecard_jsx"
     },
     {
       "label": "ServiceCard()",
       "file_type": "code",
       "source_file": "frontend/src/components/ServiceCard.jsx",
       "source_location": "L5",
-      "id": "components_servicecard_servicecard",
-      "community": 18,
-      "norm_label": "servicecard()"
+      "community": 16,
+      "norm_label": "servicecard()",
+      "id": "components_servicecard_servicecard"
     },
     {
       "label": "ServiceRow.jsx",
       "file_type": "code",
       "source_file": "frontend/src/components/ServiceRow.jsx",
       "source_location": "L1",
-      "id": "frontend_src_components_servicerow_jsx",
-      "community": 19,
-      "norm_label": "servicerow.jsx"
+      "community": 17,
+      "norm_label": "servicerow.jsx",
+      "id": "frontend_src_components_servicerow_jsx"
     },
     {
       "label": "ServiceRow()",
       "file_type": "code",
       "source_file": "frontend/src/components/ServiceRow.jsx",
       "source_location": "L6",
-      "id": "components_servicerow_servicerow",
-      "community": 19,
-      "norm_label": "servicerow()"
+      "community": 17,
+      "norm_label": "servicerow()",
+      "id": "components_servicerow_servicerow"
     },
     {
       "label": "theme-provider.jsx",
       "file_type": "code",
       "source_file": "frontend/src/components/theme-provider.jsx",
       "source_location": "L1",
-      "id": "frontend_src_components_theme_provider_jsx",
-      "community": 7,
-      "norm_label": "theme-provider.jsx"
+      "community": 6,
+      "norm_label": "theme-provider.jsx",
+      "id": "frontend_src_components_theme_provider_jsx"
     },
     {
       "label": "ThemeProvider()",
       "file_type": "code",
       "source_file": "frontend/src/components/theme-provider.jsx",
       "source_location": "L8",
-      "id": "components_theme_provider_themeprovider",
-      "community": 7,
-      "norm_label": "themeprovider()"
+      "community": 6,
+      "norm_label": "themeprovider()",
+      "id": "components_theme_provider_themeprovider"
     },
     {
       "label": "useTheme()",
       "file_type": "code",
       "source_file": "frontend/src/components/theme-provider.jsx",
       "source_location": "L49",
-      "id": "components_theme_provider_usetheme",
-      "community": 7,
-      "norm_label": "usetheme()"
+      "community": 6,
+      "norm_label": "usetheme()",
+      "id": "components_theme_provider_usetheme"
     },
     {
       "label": "usePolling.js",
       "file_type": "code",
       "source_file": "frontend/src/hooks/usePolling.js",
       "source_location": "L1",
-      "id": "frontend_src_hooks_usepolling_js",
-      "community": 8,
-      "norm_label": "usepolling.js"
+      "community": 7,
+      "norm_label": "usepolling.js",
+      "id": "frontend_src_hooks_usepolling_js"
     },
     {
       "label": "usePolling()",
       "file_type": "code",
       "source_file": "frontend/src/hooks/usePolling.js",
       "source_location": "L5",
-      "id": "hooks_usepolling_usepolling",
-      "community": 8,
-      "norm_label": "usepolling()"
+      "community": 7,
+      "norm_label": "usepolling()",
+      "id": "hooks_usepolling_usepolling"
     },
     {
       "label": "utils.js",
       "file_type": "code",
       "source_file": "frontend/src/lib/utils.js",
       "source_location": "L1",
-      "id": "frontend_src_lib_utils_js",
-      "community": 20,
-      "norm_label": "utils.js"
+      "community": 18,
+      "norm_label": "utils.js",
+      "id": "frontend_src_lib_utils_js"
     },
     {
       "label": "cn()",
       "file_type": "code",
       "source_file": "frontend/src/lib/utils.js",
       "source_location": "L4",
-      "id": "lib_utils_cn",
-      "community": 20,
-      "norm_label": "cn()"
+      "community": 18,
+      "norm_label": "cn()",
+      "id": "lib_utils_cn"
     },
     {
       "label": "Dashboard.jsx",
       "file_type": "code",
       "source_file": "frontend/src/pages/Dashboard.jsx",
       "source_location": "L1",
-      "id": "frontend_src_pages_dashboard_jsx",
-      "community": 8,
-      "norm_label": "dashboard.jsx"
+      "community": 7,
+      "norm_label": "dashboard.jsx",
+      "id": "frontend_src_pages_dashboard_jsx"
     },
     {
       "label": "Dashboard()",
       "file_type": "code",
       "source_file": "frontend/src/pages/Dashboard.jsx",
       "source_location": "L9",
-      "id": "pages_dashboard_dashboard",
-      "community": 8,
-      "norm_label": "dashboard()"
+      "community": 7,
+      "norm_label": "dashboard()",
+      "id": "pages_dashboard_dashboard"
     },
     {
       "label": "Home.jsx",
       "file_type": "code",
       "source_file": "frontend/src/pages/Home.jsx",
       "source_location": "L1",
-      "id": "frontend_src_pages_home_jsx",
-      "community": 21,
-      "norm_label": "home.jsx"
+      "community": 19,
+      "norm_label": "home.jsx",
+      "id": "frontend_src_pages_home_jsx"
     },
     {
       "label": "Home()",
       "file_type": "code",
       "source_file": "frontend/src/pages/Home.jsx",
       "source_location": "L9",
-      "id": "pages_home_home",
-      "community": 21,
-      "norm_label": "home()"
+      "community": 19,
+      "norm_label": "home()",
+      "id": "pages_home_home"
     },
     {
       "label": "authSlice.js",
       "file_type": "code",
       "source_file": "frontend/src/store/authSlice.js",
       "source_location": "L1",
-      "id": "frontend_src_store_authslice_js",
-      "community": 27,
-      "norm_label": "authslice.js"
+      "community": 29,
+      "norm_label": "authslice.js",
+      "id": "frontend_src_store_authslice_js"
     },
     {
       "label": "fleetSlice.js",
       "file_type": "code",
       "source_file": "frontend/src/store/fleetSlice.js",
       "source_location": "L1",
-      "id": "frontend_src_store_fleetslice_js",
-      "community": 28,
-      "norm_label": "fleetslice.js"
+      "community": 30,
+      "norm_label": "fleetslice.js",
+      "id": "frontend_src_store_fleetslice_js"
     },
     {
       "label": "index.js",
       "file_type": "code",
       "source_file": "frontend/src/store/index.js",
       "source_location": "L1",
-      "id": "frontend_src_store_index_js",
-      "community": 29,
-      "norm_label": "index.js"
+      "community": 31,
+      "norm_label": "index.js",
+      "id": "frontend_src_store_index_js"
     },
     {
       "label": "SentinelApplication",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/SentinelApplication.java",
-      "id": "sentinel_app",
-      "community": 23,
-      "norm_label": "sentinelapplication"
+      "community": 20,
+      "norm_label": "sentinelapplication",
+      "id": "sentinel_app"
     },
     {
       "label": "SecurityConfig",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/config/SecurityConfig.java",
-      "id": "security_config",
-      "community": 30,
-      "norm_label": "securityconfig"
+      "community": 32,
+      "norm_label": "securityconfig",
+      "id": "security_config"
     },
     {
       "label": "AuthController",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/controllers/AuthController.java",
-      "id": "auth_controller",
-      "community": 22,
-      "norm_label": "authcontroller"
+      "community": 21,
+      "norm_label": "authcontroller",
+      "id": "auth_controller"
     },
     {
       "label": "ServiceController",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
-      "id": "service_controller",
-      "community": 9,
-      "norm_label": "servicecontroller"
+      "community": 8,
+      "norm_label": "servicecontroller",
+      "id": "service_controller"
     },
     {
       "label": "ApiMonitor",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
-      "id": "api_monitor",
-      "community": 9,
-      "norm_label": "apimonitor"
+      "community": 8,
+      "norm_label": "apimonitor",
+      "id": "api_monitor"
     },
     {
       "label": "MonitoredService",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/models/MonitoredService.java",
-      "id": "monitored_service",
-      "community": 9,
-      "norm_label": "monitoredservice"
+      "community": 8,
+      "norm_label": "monitoredservice",
+      "id": "monitored_service"
     },
     {
       "label": "PingLog",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/models/PingLog.java",
-      "id": "ping_log",
-      "community": 9,
-      "norm_label": "pinglog"
+      "community": 8,
+      "norm_label": "pinglog",
+      "id": "ping_log"
     },
     {
       "label": "User",
       "file_type": "code",
       "source_file": "backend/src/main/java/com/sentinel/models/User.java",
-      "id": "user_model",
-      "community": 22,
-      "norm_label": "user"
+      "community": 21,
+      "norm_label": "user",
+      "id": "user_model"
     },
     {
-      "label": "App",
+      "label": "App.jsx",
       "file_type": "code",
-      "source_file": "frontend/src/App.jsx",
-      "id": "app_jsx",
-      "community": 11,
-      "norm_label": "app"
+      "source_file": "App.jsx",
+      "community": 2,
+      "norm_label": "app.jsx",
+      "source_location": "L1",
+      "id": "app_jsx"
     },
     {
       "label": "Navbar",
       "file_type": "code",
       "source_file": "frontend/src/components/Navbar.jsx",
-      "id": "navbar",
-      "community": 11,
-      "norm_label": "navbar"
+      "community": 2,
+      "norm_label": "navbar",
+      "id": "navbar"
     },
     {
       "label": "DarkVeil",
       "file_type": "code",
       "source_file": "frontend/src/components/DarkVeil.jsx",
-      "id": "dark_veil",
-      "community": 11,
-      "norm_label": "darkveil"
+      "community": 2,
+      "norm_label": "darkveil",
+      "id": "dark_veil"
     },
     {
       "label": "ServiceCard",
       "file_type": "code",
       "source_file": "frontend/src/components/ServiceCard.jsx",
-      "id": "service_card",
-      "community": 2,
-      "norm_label": "servicecard"
+      "community": 3,
+      "norm_label": "servicecard",
+      "id": "service_card"
     },
     {
       "label": "Dashboard",
       "file_type": "code",
       "source_file": "frontend/src/pages/Dashboard.jsx",
-      "id": "dashboard_page",
-      "community": 2,
-      "norm_label": "dashboard"
+      "community": 3,
+      "norm_label": "dashboard",
+      "id": "dashboard_page"
     },
     {
       "label": "Home",
       "file_type": "code",
       "source_file": "frontend/src/pages/Home.jsx",
-      "id": "home_page",
-      "community": 2,
-      "norm_label": "home"
+      "community": 3,
+      "norm_label": "home",
+      "id": "home_page"
     },
     {
       "label": "fleetSlice",
       "file_type": "code",
       "source_file": "frontend/src/store/fleetSlice.js",
-      "id": "fleet_slice",
-      "community": 2,
-      "norm_label": "fleetslice"
+      "community": 3,
+      "norm_label": "fleetslice",
+      "id": "fleet_slice"
     },
     {
       "label": "authSlice",
       "file_type": "code",
       "source_file": "frontend/src/store/authSlice.js",
-      "id": "auth_slice",
-      "community": 2,
-      "norm_label": "authslice"
+      "community": 3,
+      "norm_label": "authslice",
+      "id": "auth_slice"
     },
     {
       "label": "Project Progress",
       "file_type": "document",
       "source_file": "progress.md",
-      "id": "progress_md",
-      "community": 2,
-      "norm_label": "project progress"
+      "community": 3,
+      "norm_label": "project progress",
+      "id": "progress_md"
     },
     {
       "label": "Sentinel README",
       "file_type": "document",
       "source_file": "README.md",
-      "id": "readme_md",
+      "community": 20,
+      "norm_label": "sentinel readme",
+      "id": "readme_md"
+    },
+    {
+      "label": "AuthLayout.jsx",
+      "file_type": "code",
+      "source_file": "components/AuthLayout.jsx",
+      "source_location": "L1",
+      "community": 22,
+      "norm_label": "authlayout.jsx",
+      "id": "components_authlayout_jsx"
+    },
+    {
+      "label": "AuthLayout()",
+      "file_type": "code",
+      "source_file": "components/AuthLayout.jsx",
+      "source_location": "L8",
+      "community": 22,
+      "norm_label": "authlayout()",
+      "id": "components_authlayout_authlayout"
+    },
+    {
+      "label": "Navbar.jsx",
+      "file_type": "code",
+      "source_file": "components/Navbar.jsx",
+      "source_location": "L1",
+      "community": 10,
+      "norm_label": "navbar.jsx",
+      "id": "components_navbar_jsx"
+    },
+    {
+      "label": "Login.jsx",
+      "file_type": "code",
+      "source_file": "pages/Login.jsx",
+      "source_location": "L1",
       "community": 23,
-      "norm_label": "sentinel readme"
+      "norm_label": "login.jsx",
+      "id": "pages_login_jsx"
+    },
+    {
+      "label": "Login()",
+      "file_type": "code",
+      "source_file": "pages/Login.jsx",
+      "source_location": "L9",
+      "community": 23,
+      "norm_label": "login()",
+      "id": "pages_login_login"
+    },
+    {
+      "label": "Signup.jsx",
+      "file_type": "code",
+      "source_file": "pages/Signup.jsx",
+      "source_location": "L1",
+      "community": 24,
+      "norm_label": "signup.jsx",
+      "id": "pages_signup_jsx"
+    },
+    {
+      "label": "Signup()",
+      "file_type": "code",
+      "source_file": "pages/Signup.jsx",
+      "source_location": "L7",
+      "community": 24,
+      "norm_label": "signup()",
+      "id": "pages_signup_signup"
+    },
+    {
+      "label": "authSlice.js",
+      "file_type": "code",
+      "source_file": "store/authSlice.js",
+      "source_location": "L1",
+      "community": 25,
+      "norm_label": "authslice.js",
+      "id": "store_authslice_js"
+    },
+    {
+      "label": "getInitialToken()",
+      "file_type": "code",
+      "source_file": "store/authSlice.js",
+      "source_location": "L3",
+      "community": 25,
+      "norm_label": "getinitialtoken()",
+      "id": "store_authslice_getinitialtoken"
     }
   ],
   "links": [
@@ -848,9 +930,9 @@
       "source_file": "backend/src/main/java/com/sentinel/SentinelApplication.java",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_main_java_com_sentinel_sentinelapplication_java",
-      "target": "sentinel_sentinelapplication_sentinelapplication",
-      "confidence_score": 1.0
+      "target": "sentinel_sentinelapplication_sentinelapplication"
     },
     {
       "relation": "method",
@@ -858,9 +940,9 @@
       "source_file": "backend/src/main/java/com/sentinel/SentinelApplication.java",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sentinel_sentinelapplication_sentinelapplication",
-      "target": "sentinel_sentinelapplication_sentinelapplication_main",
-      "confidence_score": 1.0
+      "target": "sentinel_sentinelapplication_sentinelapplication_main"
     },
     {
       "relation": "contains",
@@ -868,9 +950,9 @@
       "source_file": "backend/src/main/java/com/sentinel/config/SecurityConfig.java",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_main_java_com_sentinel_config_securityconfig_java",
-      "target": "config_securityconfig_securityconfig",
-      "confidence_score": 1.0
+      "target": "config_securityconfig_securityconfig"
     },
     {
       "relation": "method",
@@ -878,9 +960,9 @@
       "source_file": "backend/src/main/java/com/sentinel/config/SecurityConfig.java",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "config_securityconfig_securityconfig",
-      "target": "config_securityconfig_securityconfig_securityconfig",
-      "confidence_score": 1.0
+      "target": "config_securityconfig_securityconfig_securityconfig"
     },
     {
       "relation": "method",
@@ -888,9 +970,9 @@
       "source_file": "backend/src/main/java/com/sentinel/config/SecurityConfig.java",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "config_securityconfig_securityconfig",
-      "target": "config_securityconfig_securityconfig_filterchain",
-      "confidence_score": 1.0
+      "target": "config_securityconfig_securityconfig_filterchain"
     },
     {
       "relation": "method",
@@ -898,9 +980,9 @@
       "source_file": "backend/src/main/java/com/sentinel/config/SecurityConfig.java",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "config_securityconfig_securityconfig",
-      "target": "config_securityconfig_securityconfig_passwordencoder",
-      "confidence_score": 1.0
+      "target": "config_securityconfig_securityconfig_passwordencoder"
     },
     {
       "relation": "contains",
@@ -908,9 +990,9 @@
       "source_file": "backend/src/main/java/com/sentinel/controllers/AuthController.java",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_main_java_com_sentinel_controllers_authcontroller_java",
-      "target": "controllers_authcontroller_authcontroller",
-      "confidence_score": 1.0
+      "target": "controllers_authcontroller_authcontroller"
     },
     {
       "relation": "method",
@@ -918,9 +1000,9 @@
       "source_file": "backend/src/main/java/com/sentinel/controllers/AuthController.java",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "controllers_authcontroller_authcontroller",
-      "target": "controllers_authcontroller_authcontroller_signup",
-      "confidence_score": 1.0
+      "target": "controllers_authcontroller_authcontroller_signup"
     },
     {
       "relation": "method",
@@ -928,9 +1010,9 @@
       "source_file": "backend/src/main/java/com/sentinel/controllers/AuthController.java",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "controllers_authcontroller_authcontroller",
-      "target": "controllers_authcontroller_authcontroller_login",
-      "confidence_score": 1.0
+      "target": "controllers_authcontroller_authcontroller_login"
     },
     {
       "relation": "calls",
@@ -960,9 +1042,9 @@
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_main_java_com_sentinel_controllers_servicecontroller_java",
-      "target": "controllers_servicecontroller_servicecontroller",
-      "confidence_score": 1.0
+      "target": "controllers_servicecontroller_servicecontroller"
     },
     {
       "relation": "method",
@@ -970,9 +1052,9 @@
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "controllers_servicecontroller_servicecontroller",
-      "target": "controllers_servicecontroller_servicecontroller_getcurrentuserid",
-      "confidence_score": 1.0
+      "target": "controllers_servicecontroller_servicecontroller_getcurrentuserid"
     },
     {
       "relation": "method",
@@ -980,9 +1062,9 @@
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "controllers_servicecontroller_servicecontroller",
-      "target": "controllers_servicecontroller_servicecontroller_getservices",
-      "confidence_score": 1.0
+      "target": "controllers_servicecontroller_servicecontroller_getservices"
     },
     {
       "relation": "method",
@@ -990,9 +1072,9 @@
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "controllers_servicecontroller_servicecontroller",
-      "target": "controllers_servicecontroller_servicecontroller_addservice",
-      "confidence_score": 1.0
+      "target": "controllers_servicecontroller_servicecontroller_addservice"
     },
     {
       "relation": "method",
@@ -1000,9 +1082,9 @@
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "controllers_servicecontroller_servicecontroller",
-      "target": "controllers_servicecontroller_servicecontroller_deleteservice",
-      "confidence_score": 1.0
+      "target": "controllers_servicecontroller_servicecontroller_deleteservice"
     },
     {
       "relation": "method",
@@ -1010,9 +1092,9 @@
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "controllers_servicecontroller_servicecontroller",
-      "target": "controllers_servicecontroller_servicecontroller_retryping",
-      "confidence_score": 1.0
+      "target": "controllers_servicecontroller_servicecontroller_retryping"
     },
     {
       "relation": "calls",
@@ -1021,9 +1103,9 @@
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L37",
       "weight": 1.0,
-      "source": "controllers_servicecontroller_servicecontroller_getservices",
-      "target": "controllers_servicecontroller_servicecontroller_getcurrentuserid",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "controllers_servicecontroller_servicecontroller_getcurrentuserid",
+      "target": "controllers_servicecontroller_servicecontroller_getservices"
     },
     {
       "relation": "calls",
@@ -1032,9 +1114,9 @@
       "source_file": "backend/src/main/java/com/sentinel/controllers/ServiceController.java",
       "source_location": "L73",
       "weight": 1.0,
-      "source": "controllers_servicecontroller_servicecontroller_addservice",
-      "target": "controllers_servicecontroller_servicecontroller_getcurrentuserid",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "controllers_servicecontroller_servicecontroller_getcurrentuserid",
+      "target": "controllers_servicecontroller_servicecontroller_addservice"
     },
     {
       "relation": "calls",
@@ -1119,9 +1201,9 @@
       "source_file": "backend/src/main/java/com/sentinel/dto/ServiceStatusDTO.java",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_main_java_com_sentinel_dto_servicestatusdto_java",
-      "target": "dto_servicestatusdto_servicestatusdto",
-      "confidence_score": 1.0
+      "target": "dto_servicestatusdto_servicestatusdto"
     },
     {
       "relation": "contains",
@@ -1129,9 +1211,9 @@
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_main_java_com_sentinel_engine_apimonitor_java",
-      "target": "engine_apimonitor_apimonitor",
-      "confidence_score": 1.0
+      "target": "engine_apimonitor_apimonitor"
     },
     {
       "relation": "method",
@@ -1139,9 +1221,9 @@
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_apimonitor_apimonitor",
-      "target": "engine_apimonitor_apimonitor_init",
-      "confidence_score": 1.0
+      "target": "engine_apimonitor_apimonitor_init"
     },
     {
       "relation": "method",
@@ -1149,9 +1231,9 @@
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_apimonitor_apimonitor",
-      "target": "engine_apimonitor_apimonitor_cleanup",
-      "confidence_score": 1.0
+      "target": "engine_apimonitor_apimonitor_cleanup"
     },
     {
       "relation": "method",
@@ -1159,9 +1241,9 @@
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_apimonitor_apimonitor",
-      "target": "engine_apimonitor_apimonitor_scheduleservice",
-      "confidence_score": 1.0
+      "target": "engine_apimonitor_apimonitor_scheduleservice"
     },
     {
       "relation": "method",
@@ -1169,9 +1251,9 @@
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_apimonitor_apimonitor",
-      "target": "engine_apimonitor_apimonitor_stopservice",
-      "confidence_score": 1.0
+      "target": "engine_apimonitor_apimonitor_stopservice"
     },
     {
       "relation": "method",
@@ -1179,9 +1261,9 @@
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_apimonitor_apimonitor",
-      "target": "engine_apimonitor_apimonitor_executepingprotocol",
-      "confidence_score": 1.0
+      "target": "engine_apimonitor_apimonitor_executepingprotocol"
     },
     {
       "relation": "calls",
@@ -1201,9 +1283,9 @@
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_apimonitor_apimonitor_scheduleservice",
-      "target": "engine_apimonitor_apimonitor_stopservice",
-      "confidence_score": 1.0
+      "target": "engine_apimonitor_apimonitor_stopservice"
     },
     {
       "relation": "calls",
@@ -1212,9 +1294,9 @@
       "source_file": "backend/src/main/java/com/sentinel/engine/ApiMonitor.java",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_apimonitor_apimonitor_scheduleservice",
-      "target": "engine_apimonitor_apimonitor_executepingprotocol",
-      "confidence_score": 1.0
+      "target": "engine_apimonitor_apimonitor_executepingprotocol"
     },
     {
       "relation": "contains",
@@ -1222,9 +1304,9 @@
       "source_file": "backend/src/main/java/com/sentinel/models/MonitoredService.java",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_main_java_com_sentinel_models_monitoredservice_java",
-      "target": "models_monitoredservice_monitoredservice",
-      "confidence_score": 1.0
+      "target": "models_monitoredservice_monitoredservice"
     },
     {
       "relation": "contains",
@@ -1232,9 +1314,9 @@
       "source_file": "backend/src/main/java/com/sentinel/models/PingLog.java",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_main_java_com_sentinel_models_pinglog_java",
-      "target": "models_pinglog_pinglog",
-      "confidence_score": 1.0
+      "target": "models_pinglog_pinglog"
     },
     {
       "relation": "contains",
@@ -1242,9 +1324,9 @@
       "source_file": "backend/src/main/java/com/sentinel/models/User.java",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_main_java_com_sentinel_models_user_java",
-      "target": "models_user_user",
-      "confidence_score": 1.0
+      "target": "models_user_user"
     },
     {
       "relation": "contains",
@@ -1252,9 +1334,9 @@
       "source_file": "backend/src/main/java/com/sentinel/repositories/MonitoredServiceRepository.java",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_main_java_com_sentinel_repositories_monitoredservicerepository_java",
-      "target": "repositories_monitoredservicerepository_monitoredservicerepository",
-      "confidence_score": 1.0
+      "target": "repositories_monitoredservicerepository_monitoredservicerepository"
     },
     {
       "relation": "method",
@@ -1262,9 +1344,9 @@
       "source_file": "backend/src/main/java/com/sentinel/repositories/MonitoredServiceRepository.java",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "repositories_monitoredservicerepository_monitoredservicerepository",
-      "target": "repositories_monitoredservicerepository_monitoredservicerepository_findbyuserid",
-      "confidence_score": 1.0
+      "target": "repositories_monitoredservicerepository_monitoredservicerepository_findbyuserid"
     },
     {
       "relation": "method",
@@ -1272,9 +1354,9 @@
       "source_file": "backend/src/main/java/com/sentinel/repositories/MonitoredServiceRepository.java",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "repositories_monitoredservicerepository_monitoredservicerepository",
-      "target": "repositories_monitoredservicerepository_monitoredservicerepository_findbyisactivetrue",
-      "confidence_score": 1.0
+      "target": "repositories_monitoredservicerepository_monitoredservicerepository_findbyisactivetrue"
     },
     {
       "relation": "contains",
@@ -1282,9 +1364,9 @@
       "source_file": "backend/src/main/java/com/sentinel/repositories/PingLogRepository.java",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_main_java_com_sentinel_repositories_pinglogrepository_java",
-      "target": "repositories_pinglogrepository_pinglogrepository",
-      "confidence_score": 1.0
+      "target": "repositories_pinglogrepository_pinglogrepository"
     },
     {
       "relation": "method",
@@ -1292,9 +1374,9 @@
       "source_file": "backend/src/main/java/com/sentinel/repositories/PingLogRepository.java",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "repositories_pinglogrepository_pinglogrepository",
-      "target": "repositories_pinglogrepository_pinglogrepository_findbyserviceidorderbytimestampdesc",
-      "confidence_score": 1.0
+      "target": "repositories_pinglogrepository_pinglogrepository_findbyserviceidorderbytimestampdesc"
     },
     {
       "relation": "method",
@@ -1302,9 +1384,9 @@
       "source_file": "backend/src/main/java/com/sentinel/repositories/PingLogRepository.java",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "repositories_pinglogrepository_pinglogrepository",
-      "target": "repositories_pinglogrepository_pinglogrepository_findfirstbyserviceidorderbytimestampdesc",
-      "confidence_score": 1.0
+      "target": "repositories_pinglogrepository_pinglogrepository_findfirstbyserviceidorderbytimestampdesc"
     },
     {
       "relation": "contains",
@@ -1312,9 +1394,9 @@
       "source_file": "backend/src/main/java/com/sentinel/repositories/UserRepository.java",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_main_java_com_sentinel_repositories_userrepository_java",
-      "target": "repositories_userrepository_userrepository",
-      "confidence_score": 1.0
+      "target": "repositories_userrepository_userrepository"
     },
     {
       "relation": "method",
@@ -1322,9 +1404,9 @@
       "source_file": "backend/src/main/java/com/sentinel/repositories/UserRepository.java",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "repositories_userrepository_userrepository",
-      "target": "repositories_userrepository_userrepository_findbyemail",
-      "confidence_score": 1.0
+      "target": "repositories_userrepository_userrepository_findbyemail"
     },
     {
       "relation": "method",
@@ -1332,9 +1414,9 @@
       "source_file": "backend/src/main/java/com/sentinel/repositories/UserRepository.java",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "repositories_userrepository_userrepository",
-      "target": "repositories_userrepository_userrepository_existsbyemail",
-      "confidence_score": 1.0
+      "target": "repositories_userrepository_userrepository_existsbyemail"
     },
     {
       "relation": "contains",
@@ -1342,9 +1424,9 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_app_jsx",
-      "target": "src_app_protectedroute",
-      "confidence_score": 1.0
+      "target": "src_app_protectedroute"
     },
     {
       "relation": "contains",
@@ -1352,9 +1434,9 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_app_jsx",
-      "target": "src_app_appcontent",
-      "confidence_score": 1.0
+      "target": "src_app_appcontent"
     },
     {
       "relation": "contains",
@@ -1362,9 +1444,9 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_app_jsx",
-      "target": "src_app_authwrapper",
-      "confidence_score": 1.0
+      "target": "src_app_authwrapper"
     },
     {
       "relation": "contains",
@@ -1372,9 +1454,39 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L193",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_app_jsx",
-      "target": "src_app_app",
-      "confidence_score": 1.0
+      "target": "src_app_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "App.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_protectedroute",
+      "target": "app_jsx"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "App.jsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_appcontent",
+      "target": "app_jsx"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "App.jsx",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_app",
+      "target": "app_jsx"
     },
     {
       "relation": "imports",
@@ -1383,9 +1495,9 @@
       "source_file": "frontend/src/main.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_main_jsx",
-      "target": "components_theme_provider_themeprovider",
-      "confidence_score": 1.0
+      "target": "components_theme_provider_themeprovider"
     },
     {
       "relation": "contains",
@@ -1393,9 +1505,9 @@
       "source_file": "frontend/src/components/DarkVeil.jsx",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_components_darkveil_jsx",
-      "target": "components_darkveil_darkveil",
-      "confidence_score": 1.0
+      "target": "components_darkveil_darkveil"
     },
     {
       "relation": "contains",
@@ -1403,9 +1515,19 @@
       "source_file": "frontend/src/components/Navbar.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_components_navbar_jsx",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Navbar.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_navbar_navbar",
+      "target": "components_navbar_jsx"
     },
     {
       "relation": "contains",
@@ -1413,9 +1535,9 @@
       "source_file": "frontend/src/components/ServiceCard.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_components_servicecard_jsx",
-      "target": "components_servicecard_servicecard",
-      "confidence_score": 1.0
+      "target": "components_servicecard_servicecard"
     },
     {
       "relation": "contains",
@@ -1423,9 +1545,9 @@
       "source_file": "frontend/src/components/ServiceRow.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_components_servicerow_jsx",
-      "target": "components_servicerow_servicerow",
-      "confidence_score": 1.0
+      "target": "components_servicerow_servicerow"
     },
     {
       "relation": "contains",
@@ -1433,9 +1555,9 @@
       "source_file": "frontend/src/components/theme-provider.jsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_components_theme_provider_jsx",
-      "target": "components_theme_provider_themeprovider",
-      "confidence_score": 1.0
+      "target": "components_theme_provider_themeprovider"
     },
     {
       "relation": "contains",
@@ -1443,9 +1565,9 @@
       "source_file": "frontend/src/components/theme-provider.jsx",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_components_theme_provider_jsx",
-      "target": "components_theme_provider_usetheme",
-      "confidence_score": 1.0
+      "target": "components_theme_provider_usetheme"
     },
     {
       "relation": "contains",
@@ -1453,9 +1575,9 @@
       "source_file": "frontend/src/hooks/usePolling.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_hooks_usepolling_js",
-      "target": "hooks_usepolling_usepolling",
-      "confidence_score": 1.0
+      "target": "hooks_usepolling_usepolling"
     },
     {
       "relation": "imports",
@@ -1464,9 +1586,9 @@
       "source_file": "frontend/src/pages/Dashboard.jsx",
       "source_location": "L4",
       "weight": 1.0,
-      "source": "frontend_src_pages_dashboard_jsx",
-      "target": "hooks_usepolling_usepolling",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "hooks_usepolling_usepolling",
+      "target": "frontend_src_pages_dashboard_jsx"
     },
     {
       "relation": "calls",
@@ -1476,8 +1598,8 @@
       "source_file": "frontend/src/pages/Dashboard.jsx",
       "source_location": "L10",
       "weight": 1.0,
-      "source": "pages_dashboard_dashboard",
-      "target": "hooks_usepolling_usepolling"
+      "source": "hooks_usepolling_usepolling",
+      "target": "pages_dashboard_dashboard"
     },
     {
       "relation": "contains",
@@ -1485,9 +1607,9 @@
       "source_file": "frontend/src/lib/utils.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_lib_utils_js",
-      "target": "lib_utils_cn",
-      "confidence_score": 1.0
+      "target": "lib_utils_cn"
     },
     {
       "relation": "contains",
@@ -1495,9 +1617,9 @@
       "source_file": "frontend/src/pages/Dashboard.jsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_pages_dashboard_jsx",
-      "target": "pages_dashboard_dashboard",
-      "confidence_score": 1.0
+      "target": "pages_dashboard_dashboard"
     },
     {
       "relation": "contains",
@@ -1505,16 +1627,16 @@
       "source_file": "frontend/src/pages/Home.jsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_pages_home_jsx",
-      "target": "pages_home_home",
-      "confidence_score": 1.0
+      "target": "pages_home_home"
     },
     {
       "relation": "references",
       "confidence": "INFERRED",
       "confidence_score": 0.95,
-      "source": "readme_md",
-      "target": "sentinel_app"
+      "source": "sentinel_app",
+      "target": "readme_md"
     },
     {
       "relation": "references",
@@ -1562,8 +1684,8 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source": "dashboard_page",
-      "target": "service_card"
+      "source": "service_card",
+      "target": "dashboard_page"
     },
     {
       "relation": "references",
@@ -1583,8 +1705,8 @@
       "relation": "references",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
-      "source": "progress_md",
-      "target": "dashboard_page"
+      "source": "dashboard_page",
+      "target": "progress_md"
     },
     {
       "relation": "references",
@@ -1592,8 +1714,48 @@
       "confidence_score": 1.0,
       "source": "home_page",
       "target": "auth_slice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/AuthLayout.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_authlayout_jsx",
+      "target": "components_authlayout_authlayout"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/Login.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_login_jsx",
+      "target": "pages_login_login"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/Signup.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_signup_jsx",
+      "target": "pages_signup_signup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "store/authSlice.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "store_authslice_js",
+      "target": "store_authslice_getinitialtoken"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "644021402bdce6e90abf779c2a2ad03988b3cdda"
+  "built_at_commit": "9a7e5e6016cf001273aa39eb4201a72caaa2d478"
 }

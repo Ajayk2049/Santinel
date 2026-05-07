@@ -14,6 +14,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -52,15 +54,22 @@ public class ServiceController {
                             .isActive(service.isActive())
                             .avgResponseTime(avgResponseTime);
 
+                    List<PingLog> uptimeLogs = pingLogRepository.findTop100ByServiceIdOrderByTimestampDesc(service.getId());
+                    double uptime = uptimeLogs.isEmpty() ? 100.0 : 
+                        (double) uptimeLogs.stream().filter(l -> l.getStatusCode() >= 200 && l.getStatusCode() < 300).count() 
+                        / uptimeLogs.size() * 100.0;
+
                     if (!logs.isEmpty()) {
                         PingLog latest = logs.get(0);
                         builder.lastStatusCode(latest.getStatusCode())
                                .lastResponseTimeMs(latest.getResponseTimeMs())
                                .lastTimestamp(latest.getTimestamp().toString())
                                .lastMessage(latest.getMessage())
-                               .status(latest.getStatusCode() >= 200 && latest.getStatusCode() < 300 ? "UP" : "DOWN");
+                               .status(latest.getStatusCode() >= 200 && latest.getStatusCode() < 300 ? "UP" : "DOWN")
+                               .uptimePercentage(uptime);
                     } else {
-                        builder.status("DOWN");
+                        builder.status("DOWN")
+                               .uptimePercentage(uptime);
                     }
 
                     return builder.build();
@@ -92,6 +101,23 @@ public class ServiceController {
         return serviceRepository.findById(id).map(service -> {
             apiMonitor.executePingProtocol(service);
             return ResponseEntity.ok().build();
+        }).orElse(ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/{id}/incidents")
+    public Page<PingLog> getIncidents(@PathVariable String id, @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
+        return pingLogRepository.findByServiceIdAndStatusCodeGreaterThanEqualOrderByTimestampDesc(id, 400, PageRequest.of(page, size));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<MonitoredService> updateService(@PathVariable String id, @RequestBody MonitoredService updatedService) {
+        return serviceRepository.findById(id).map(existing -> {
+            existing.setName(updatedService.getName());
+            existing.setUrl(updatedService.getUrl());
+            existing.setPingInterval(updatedService.getPingInterval());
+            MonitoredService saved = serviceRepository.save(existing);
+            apiMonitor.scheduleService(saved);
+            return ResponseEntity.ok(saved);
         }).orElse(ResponseEntity.notFound().build());
     }
 }
