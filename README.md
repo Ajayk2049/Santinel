@@ -2,8 +2,10 @@
 
 ![SENTINEL Banner](https://img.shields.io/badge/MISSION-CRITICAL-14b8a6?style=for-the-badge)
 ![Status](https://img.shields.io/badge/STATUS-OPERATIONAL-success?style=for-the-badge)
+![Backend](https://img.shields.io/badge/SPRING--BOOT-3.x-green?style=for-the-badge&logo=spring)
+![Frontend](https://img.shields.io/badge/REACT-18.x-blue?style=for-the-badge&logo=react)
 
-Sentinel is a high-performance, mission-critical API monitoring platform designed for real-time fleet surveillance. It pings external endpoints at scheduled intervals, logs telemetry data (latency, status codes, uptime), and serves this data to a premium, WebGL-enhanced dashboard.
+Sentinel is a high-performance, mission-critical API monitoring platform designed for real-time fleet surveillance. It provides DevOps teams and SREs with a premium "Mission Control" interface to track the health, latency, and uptime of distributed microservices.
 
 ---
 
@@ -20,50 +22,32 @@ Sentinel is a high-performance, mission-critical API monitoring platform designe
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Project Philosophy & Use Case
 
-### Backend Infrastructure
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+In modern microservice architectures, API reliability is paramount. **Sentinel** was built to bridge the gap between simple "ping" scripts and complex, expensive enterprise monitoring suites.
 
-### Frontend Operations
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white)
-![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
-![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
-
-#### 🎨 Design & Animation
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![OGL WebGL](https://img.shields.io/badge/OGL_WebGL-990000?style=for-the-badge&logo=webgl&logoColor=white)
-![Lucide](https://img.shields.io/badge/Lucide_Icons-FF0066?style=for-the-badge&logo=lucide&logoColor=white)
-![Phosphor Icons](https://img.shields.io/badge/Phosphor_Icons-888888?style=for-the-badge&logo=phosphor-icons&logoColor=white)
-
-#### 🧩 Shadcn UI & Utilities
-![Shadcn UI](https://img.shields.io/badge/Shadcn_UI-000000?style=for-the-badge&logo=shadcnui&logoColor=white)
-![Radix UI](https://img.shields.io/badge/Radix_UI-161616?style=for-the-badge&logo=radix-ui&logoColor=white)
-![CVA](https://img.shields.io/badge/Class_Variance_Authority-teal?style=for-the-badge)
-![Clsx](https://img.shields.io/badge/Clsx-blue?style=for-the-badge)
-![Tailwind Merge](https://img.shields.io/badge/Tailwind_Merge-orange?style=for-the-badge)
-![Tailwind Animate](https://img.shields.io/badge/Tailwind_Animate-purple?style=for-the-badge)
-![TW Animate CSS](https://img.shields.io/badge/TW_Animate_CSS-yellow?style=for-the-badge)
-
-#### 🔡 Typography
-![Fontsource](https://img.shields.io/badge/Merriweather-grey?style=for-the-badge&logo=fontsource)
-![Fontsource](https://img.shields.io/badge/Noto_Sans-grey?style=for-the-badge&logo=fontsource)
+### Core Use Cases:
+*   **Real-Time Surveillance**: Monitor critical endpoints (Auth, Payment, Search) with sub-minute precision.
+*   **Incident Deep-Dive**: Use the **Intelligence Modal** to parse response payloads (JSON/Images) and identify the root cause of failures.
+*   **Fleet Management**: Organize and filter large numbers of services based on healthy vs. incident states.
+*   **Uptime Stability Tracking**: Calculate long-term reliability scores based on the last 100 surveillance pulses.
 
 ---
 
-## 📈 Technical Specifications
+## 🛠️ Tech Stack & Architecture
 
-### Telemetry & Logging
-The system maintains a dual-layer logging strategy:
-- **System Logs**: Located in `backend/logs/`, tracking all Spring Boot internal operations.
-- **Incident Logs**: Stored in MongoDB, providing historical data for every registered API endpoint, accessible via the dashboard's telemetry view.
+### 🌌 Backend (Spring Boot Infrastructure)
+The backend is a robust Java-based engine built on **Spring Boot 3**, leveraging a multi-threaded polling architecture.
+*   **Polling Engine (`ApiMonitor.java`)**: A specialized component utilizing `TaskScheduler` to manage independent threads for every registered service.
+*   **REST API Layer**: Controllers built with Spring Web to provide paginated incident logs and real-time fleet status.
+*   **Security Context**: Stateless JWT authentication with a custom `JwtTokenFilter` and BCrypt password encryption.
+*   **Persistence**: MongoDB Atlas integration using `Spring Data MongoDB` for time-series ping logging.
+
+### 🌓 Frontend (React Operations)
+A premium "Dark Veil" aesthetic built for high-density information display.
+*   **Mission Control Dashboard**: A responsive grid-based UI utilizing **Framer Motion** for status-driven animations.
+*   **State Management**: **Redux Toolkit** handles the global fleet state, ensuring real-time UI updates as the surveillance engine reports back.
+*   **Intelligence Extraction**: A specialized React component that detects image URLs and structured JSON (like titles/bodies) within raw API responses.
 
 ---
 
@@ -72,17 +56,18 @@ The system maintains a dual-layer logging strategy:
 ```text
 Santinel/
 ├── backend/                # Spring Boot 3 + MongoDB Atlas
-│   ├── src/main/java/      # Core logic (Polling Engine, Auth, Controllers)
-│   ├── src/main/resources/ # Configuration & Logback setup
-│   ├── logs/               # Persistent system logs
-│   └── .env                # Backend environment secrets
+│   ├── src/main/java/      # Core logic (Repositories, Security, Controllers)
+│   │   ├── config/         # Security & CORS configuration
+│   │   ├── engine/         # ApiMonitor (The Heart of Sentinel)
+│   │   ├── models/         # MongoDB Documents (User, Service, PingLog)
+│   │   └── controllers/    # API Endpoints
+│   └── src/main/resources/ # Configuration & Logback setup
 ├── frontend/               # React 18 + Vite + Redux
-│   ├── src/components/     # UI Components (DarkVeil, Navbar, etc.)
-│   ├── src/pages/          # Main Views (Home, Auth, Dashboard)
-│   ├── src/store/          # Redux State Management
-│   └── public/             # Static assets (Favicons, etc.)
-├── progress.md             # Mandatory activity logging (Internal)
-└── README.md               # Master Project Documentation
+│   ├── src/components/     # Modular UI (ServiceCard, IntelligenceModal)
+│   ├── src/pages/          # Main Views (Dashboard, Auth, Home)
+│   ├── src/store/          # Redux Slices & Async Thunks
+│   └── src/hooks/          # Custom Hooks (usePolling)
+└── progress.md             # Development activity log
 ```
 
 ---
@@ -92,24 +77,23 @@ Santinel/
 ### 1. Prerequisites
 - **Java 17+** Installed
 - **Node.js 18+** Installed
-- **MongoDB Atlas** Account (for cloud persistence)
+- **MongoDB Atlas** Account
 
 ### 2. Backend Configuration
 Create a `.env` file in the `backend/` directory:
 ```env
 PORT=5500
 MONGO_URI=your_mongodb_atlas_connection_string
-JWT_SECRET=your_secure_random_key (or leave empty for auto-gen)
+JWT_SECRET=your_secure_random_key
 ```
 
-**Launch Terminal:**
+**Launch Backend:**
 ```powershell
 cd backend
 ./mvnw spring-boot:run
 ```
 
 ### 3. Frontend Configuration
-Install dependencies and initiate the development server:
 ```powershell
 cd frontend
 npm install
@@ -118,18 +102,16 @@ npm run dev
 
 ---
 
-## 🛰️ Core Systems
+## 🛰️ Core System Features
 
-### Polling Engine
-The backend utilizes a multi-threaded `@Scheduled` engine to ping registered API endpoints every 60 seconds. It records:
-- **Latency**: Precise response time in milliseconds.
-- **Status Codes**: 2xx (Success), 4xx/5xx (Incidents).
-- **History**: Time-series data for incident tracking.
+### 📡 Surveillance Engine
+The engine pings registered endpoints using Java's `HttpClient`. It records latency, status codes, and the full raw payload. It automatically reschedules polling threads when a service's interval is updated via the dashboard.
 
-### Auth Portal
-- **JWT-Based**: Secure stateless authentication.
-- **Google Protocol**: Frontend supports browser-native strong password suggestions during signup.
-- **Dynamic Identity**: Navbar extracts and displays operator handles from session tokens.
+### 🧠 Intelligence Modal
+A tabbed analysis tool that separates **Raw Data** from **Intelligence Data**. It uses smart extraction to render images from APIs (like Dog CEO) or clean lists of content (like JSONPlaceholder posts), providing instant visual feedback on API health.
+
+### 🛡️ Secure Auth Portal
+Stateless JWT authentication ensures that only authorized operators can modify the surveillance fleet. The system supports browser-native password management and persistent sessions.
 
 ---
 
