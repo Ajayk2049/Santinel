@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.Instant;
+import java.util.Map;
 
 @Data
 @Builder
@@ -20,6 +21,14 @@ public class MonitoredService {
     private String name;
     private String url;
     private boolean isActive;
+    
+    @Builder.Default
+    private String httpMethod = "GET";
+    private Map<String, String> headers;
+    private String authType;
+    private String authToken;
+    private String requestBody;
+
     @Builder.Default
     private Instant createdAt = Instant.now();
     @Builder.Default

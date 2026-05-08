@@ -51,6 +51,7 @@ public class ServiceController {
                             .id(service.getId())
                             .name(service.getName())
                             .url(service.getUrl())
+                            .httpMethod(service.getHttpMethod())
                             .isActive(service.isActive())
                             .avgResponseTime(avgResponseTime);
 
@@ -115,6 +116,12 @@ public class ServiceController {
             existing.setName(updatedService.getName());
             existing.setUrl(updatedService.getUrl());
             existing.setPingInterval(updatedService.getPingInterval());
+            existing.setHttpMethod(updatedService.getHttpMethod());
+            existing.setHeaders(updatedService.getHeaders());
+            existing.setAuthType(updatedService.getAuthType());
+            existing.setAuthToken(updatedService.getAuthToken());
+            existing.setRequestBody(updatedService.getRequestBody());
+            
             MonitoredService saved = serviceRepository.save(existing);
             apiMonitor.scheduleService(saved);
             return ResponseEntity.ok(saved);

@@ -1,60 +1,39 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import axiosInstance from '../lib/axiosInstance';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5500';
-
-export const fetchServices = createAsyncThunk('fleet/fetchServices', async (_, { getState }) => {
-    const { auth } = getState();
-    const url = `${API_BASE}/api/services/status`;
-    console.log("Fetching fleet status from:", url, "Token present:", !!auth.token);
-    const response = await axios.get(url, {
-        headers: { Authorization: `Bearer ${auth.token}` }
-    });
+export const fetchServices = createAsyncThunk('fleet/fetchServices', async () => {
+    const url = `/api/services/status`;
+    const response = await axiosInstance.get(url);
     return response.data;
 });
 
-export const addService = createAsyncThunk('fleet/addService', async (serviceData, { getState }) => {
-    const { auth } = getState();
-    const url = `${API_BASE}/api/services`;
-    const response = await axios.post(url, serviceData, {
-        headers: { Authorization: `Bearer ${auth.token}` }
-    });
+export const addService = createAsyncThunk('fleet/addService', async (serviceData) => {
+    const url = `/api/services`;
+    const response = await axiosInstance.post(url, serviceData);
     return response.data;
 });
 
-export const deleteService = createAsyncThunk('fleet/deleteService', async (id, { getState }) => {
-    const { auth } = getState();
-    const url = `${API_BASE}/api/services/${id}`;
-    await axios.delete(url, {
-        headers: { Authorization: `Bearer ${auth.token}` }
-    });
+export const deleteService = createAsyncThunk('fleet/deleteService', async (id) => {
+    const url = `/api/services/${id}`;
+    await axiosInstance.delete(url);
     return id;
 });
 
-export const retryPing = createAsyncThunk('fleet/retryPing', async (id, { getState }) => {
-    const { auth } = getState();
-    const url = `${API_BASE}/api/services/${id}/retry`;
-    await axios.post(url, {}, {
-        headers: { Authorization: `Bearer ${auth.token}` }
-    });
+export const retryPing = createAsyncThunk('fleet/retryPing', async (id) => {
+    const url = `/api/services/${id}/retry`;
+    await axiosInstance.post(url, {});
     return id;
 });
 
-export const updateService = createAsyncThunk('fleet/updateService', async ({ id, data }, { getState }) => {
-    const { auth } = getState();
-    const url = `${API_BASE}/api/services/${id}`;
-    const response = await axios.put(url, data, {
-        headers: { Authorization: `Bearer ${auth.token}` }
-    });
+export const updateService = createAsyncThunk('fleet/updateService', async ({ id, data }) => {
+    const url = `/api/services/${id}`;
+    const response = await axiosInstance.put(url, data);
     return response.data;
 });
 
-export const fetchIncidents = createAsyncThunk('fleet/fetchIncidents', async ({ id, page = 0, size = 10 }, { getState }) => {
-    const { auth } = getState();
-    const url = `${API_BASE}/api/services/${id}/incidents?page=${page}&size=${size}`;
-    const response = await axios.get(url, {
-        headers: { Authorization: `Bearer ${auth.token}` }
-    });
+export const fetchIncidents = createAsyncThunk('fleet/fetchIncidents', async ({ id, page = 0, size = 10 }) => {
+    const url = `/api/services/${id}/incidents?page=${page}&size=${size}`;
+    const response = await axiosInstance.get(url);
     return response.data;
 });
 

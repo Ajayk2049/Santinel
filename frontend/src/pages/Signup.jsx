@@ -1,11 +1,18 @@
 import { useState } from 'react'
-import axios from 'axios'
+import axiosInstance from '../lib/axiosInstance'
 import { useNavigate } from 'react-router-dom'
 import { AlertCircle, CheckCircle2, Info } from 'lucide-react'
 import AuthLayout from '../components/AuthLayout'
+import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 
 const Signup = () => {
   const navigate = useNavigate()
+  const { token } = useSelector(state => state.auth)
+
+  useEffect(() => {
+    if (token) navigate('/dashboard', { replace: true })
+  }, [token, navigate])
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
@@ -21,7 +28,7 @@ const Signup = () => {
       return
     }
     try {
-      await axios.post('http://localhost:5500/api/auth/signup', { email, password })
+      await axiosInstance.post('/api/auth/signup', { email, password })
       setSuccess('Registration successful! You can now sign in.')
       setConfirmPassword('')
       setTimeout(() => navigate('/login'), 2000)

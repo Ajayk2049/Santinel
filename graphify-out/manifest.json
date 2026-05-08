@@ -27,17 +27,25 @@
     "mtime": 1777869878.2627,
     "hash": "53f4b714a0fc601d94fa89073d63e046"
   },
+  "A:\\Projects\\Santinel\\frontend\\src\\components\\EditServiceModal.jsx": {
+    "mtime": 1778146758.8506196,
+    "hash": "68238630efa1767f7837336f06ce768d"
+  },
   "A:\\Projects\\Santinel\\frontend\\src\\components\\Navbar.jsx": {
     "mtime": 1778065380.923271,
     "hash": "87cc96025ff39c5d1181c0d3be28cc59"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\components\\ServiceCard.jsx": {
-    "mtime": 1777979741.704559,
-    "hash": "03287b7c35da813fc7246264192b2236"
+    "mtime": 1778153964.2329402,
+    "hash": "837c2c7eee640b9054de89b66fd1d164"
   },
-  "A:\\Projects\\Santinel\\frontend\\src\\components\\ServiceRow.jsx": {
-    "mtime": 1778052105.5303702,
-    "hash": "28c0970a8f76c0dab877b0fa17fba044"
+  "A:\\Projects\\Santinel\\frontend\\src\\components\\ServiceDetailModal.jsx": {
+    "mtime": 1778151273.5270362,
+    "hash": "9334f13bb8bb5a41c5aa5f81415b41cd"
+  },
+  "A:\\Projects\\Santinel\\frontend\\src\\components\\ServiceGrid.jsx": {
+    "mtime": 1778153052.179757,
+    "hash": "f049cb0c5ac166591c367054e5c7a7af"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\components\\theme-provider.jsx": {
     "mtime": 1777816905.3134978,
@@ -52,8 +60,8 @@
     "hash": "eff53006b93cfdef4aef148f202f1c3c"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\pages\\Dashboard.jsx": {
-    "mtime": 1778053366.5548604,
-    "hash": "9d02548942b09c5d5b7e0750efe6232f"
+    "mtime": 1778153044.8219573,
+    "hash": "b4824b91e6471eadd37f40e057240d5c"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\pages\\Home.jsx": {
     "mtime": 1777876847.3119268,
@@ -72,8 +80,8 @@
     "hash": "468fbe37ce71b265c9dc939619e42496"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\store\\fleetSlice.js": {
-    "mtime": 1778053348.4104762,
-    "hash": "5034035188c183802995aaf392434b9f"
+    "mtime": 1778146742.0490215,
+    "hash": "fba44c55e857c472add821e5891b5f93"
   },
   "A:\\Projects\\Santinel\\frontend\\src\\store\\index.js": {
     "mtime": 1777817968.1537654,

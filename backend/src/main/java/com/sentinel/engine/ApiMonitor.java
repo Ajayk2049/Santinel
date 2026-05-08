@@ -76,11 +76,34 @@ public class ApiMonitor {
     public void executePingProtocol(MonitoredService service) {
         long startTime = System.currentTimeMillis();
         try {
-            HttpRequest request = HttpRequest.newBuilder()
+            String method = service.getHttpMethod() != null ? service.getHttpMethod().toUpperCase() : "GET";
+            HttpRequest.Builder requestBuilder = HttpRequest.newBuilder()
                     .uri(URI.create(service.getUrl()))
-                    .timeout(Duration.ofSeconds(10))
-                    .GET()
-                    .build();
+                    .timeout(Duration.ofSeconds(10));
+
+            // Handle Body
+            HttpRequest.BodyPublisher bodyPublisher = HttpRequest.BodyPublishers.noBody();
+            if ((method.equals("POST") || method.equals("PUT") || method.equals("PATCH")) && 
+                service.getRequestBody() != null && !service.getRequestBody().isEmpty()) {
+                bodyPublisher = HttpRequest.BodyPublishers.ofString(service.getRequestBody());
+                requestBuilder.header("Content-Type", "application/json");
+            }
+
+            // Set Method
+            requestBuilder.method(method, bodyPublisher);
+
+            // Attach Custom Headers
+            if (service.getHeaders() != null) {
+                service.getHeaders().forEach(requestBuilder::header);
+            }
+
+            // Handle Authentication
+            if ("BEARER".equalsIgnoreCase(service.getAuthType()) && 
+                service.getAuthToken() != null && !service.getAuthToken().isEmpty()) {
+                requestBuilder.header("Authorization", "Bearer " + service.getAuthToken());
+            }
+
+            HttpRequest request = requestBuilder.build();
 
             httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
                     .thenApply(response -> {

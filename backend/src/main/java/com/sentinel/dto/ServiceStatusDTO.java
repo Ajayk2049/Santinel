@@ -13,6 +13,7 @@ public class ServiceStatusDTO {
     private String id;
     private String name;
     private String url;
+    private String httpMethod;
     private boolean isActive;
     private int lastStatusCode;
     private long lastResponseTimeMs;

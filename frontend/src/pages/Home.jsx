@@ -3,11 +3,19 @@ import DarkVeil from '../components/DarkVeil'
 import '../components/DarkVeil.css'
 import { motion } from 'framer-motion'
 import { Shield, Zap } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { useEffect } from 'react'
 
 export default function Home() {
   const { token } = useSelector(state => state.auth)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (token) {
+      navigate('/dashboard', { replace: true })
+    }
+  }, [token, navigate])
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black text-white">

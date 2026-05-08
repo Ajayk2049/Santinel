@@ -1,14 +1,21 @@
 import { useState } from 'react'
-import axios from 'axios'
+import axiosInstance from '../lib/axiosInstance'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { setToken } from '../store/authSlice'
 import { AlertCircle, CheckCircle2 } from 'lucide-react'
 import AuthLayout from '../components/AuthLayout'
+import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 
 const Login = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const { token } = useSelector(state => state.auth)
+
+  useEffect(() => {
+    if (token) navigate('/dashboard', { replace: true })
+  }, [token, navigate])
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
@@ -18,7 +25,7 @@ const Login = () => {
     e.preventDefault()
     setError('')
     try {
-      const res = await axios.post('http://localhost:5500/api/auth/login', { email, password })
+      const res = await axiosInstance.post('/api/auth/login', { email, password })
       dispatch(setToken(res.data.token))
       navigate('/dashboard')
     } catch (err) {
