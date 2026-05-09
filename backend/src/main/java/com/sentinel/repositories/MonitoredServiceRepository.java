@@ -6,5 +6,7 @@ import java.util.List;
 
 public interface MonitoredServiceRepository extends MongoRepository<MonitoredService, String> {
     List<MonitoredService> findByUserId(String userId);
+    List<MonitoredService> findByUserIdAndWorkspaceId(String userId, String workspaceId);
+    List<MonitoredService> findByUserIdAndWorkspaceIdIsNull(String userId);
     List<MonitoredService> findByIsActiveTrue();
 }

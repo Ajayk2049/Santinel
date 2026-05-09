@@ -35,9 +35,17 @@ public class ServiceController {
     }
 
     @GetMapping("/status")
-    public List<ServiceStatusDTO> getServices() {
+    public List<ServiceStatusDTO> getServices(@RequestParam(required = false) String workspaceId) {
         String userId = getCurrentUserId();
-        return serviceRepository.findByUserId(userId).stream()
+        List<MonitoredService> services;
+        
+        if (workspaceId != null) {
+            services = serviceRepository.findByUserIdAndWorkspaceId(userId, workspaceId);
+        } else {
+            services = serviceRepository.findByUserId(userId);
+        }
+
+        return services.stream()
                 .map(service -> {
                     List<PingLog> logs = pingLogRepository.findByServiceIdOrderByTimestampDesc(service.getId());
                     
@@ -49,6 +57,7 @@ public class ServiceController {
 
                     ServiceStatusDTO.ServiceStatusDTOBuilder builder = ServiceStatusDTO.builder()
                             .id(service.getId())
+                            .workspaceId(service.getWorkspaceId())
                             .name(service.getName())
                             .url(service.getUrl())
                             .httpMethod(service.getHttpMethod())

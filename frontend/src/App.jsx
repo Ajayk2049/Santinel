@@ -21,10 +21,7 @@ function AppContent() {
 
       <Route path="/dashboard" element={
         <ProtectedRoute>
-          <div className="min-h-screen bg-background text-foreground">
-            <Navbar />
-            <main><Dashboard /></main>
-          </div>
+          <Dashboard />
         </ProtectedRoute>
       } />
 

@@ -1,17 +1,26 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import ServiceGrid from "../components/ServiceGrid"
 import EditServiceModal from "../components/EditServiceModal"
 import ServiceDetailModal from "../components/ServiceDetailModal"
 import { usePolling } from "../hooks/usePolling"
-import { addService, fetchServices } from "../store/fleetSlice"
-import { Plus, X, Activity, Radar, Clock, Settings, Trash2, ChevronRight, Lock, Database, ListFilter } from "lucide-react"
+import { addService, fetchServices, fetchWorkspaces, setActiveWorkspace } from "../store/fleetSlice"
+import { Plus, X, Activity, Radar, Clock, Settings, Trash2, ChevronRight, Lock, Folder, ListFilter } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import Navbar from "../components/Navbar"
 
 export default function Dashboard() {
   usePolling(15000)
   const dispatch = useDispatch()
-  const { services } = useSelector((state) => state.fleet)
+  const { services, workspaces, activeWorkspace } = useSelector((state) => state.fleet)
+
+  useEffect(() => {
+    dispatch(fetchWorkspaces())
+  }, [dispatch])
+
+  useEffect(() => {
+    dispatch(fetchServices(activeWorkspace?.id))
+  }, [dispatch, activeWorkspace])
   
   // Modal States
   const [isAddModalOpen, setIsAddModalOpen] = useState(false)
@@ -22,6 +31,13 @@ export default function Dashboard() {
   const [activeTab, setActiveTab] = useState('PARAMS')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [activeFilter, setActiveFilter] = useState('ALL')
+
+  const filteredServices = activeWorkspace 
+    ? services.filter(s => s.workspaceId === activeWorkspace.id)
+    : services
+
+  const incidents = filteredServices.filter(s => s.status !== 'UP').length
+  const healthy = filteredServices.length - incidents
 
   const [newService, setNewService] = useState({ 
     name: "", 
@@ -35,9 +51,6 @@ export default function Dashboard() {
     body: ""
   })
 
-  const incidents = services.filter(s => s.status !== 'UP').length
-  const healthy = services.length - incidents
-
   const handleAddService = async (e) => {
     e.preventDefault()
     if (isSubmitting) return
@@ -49,12 +62,12 @@ export default function Dashboard() {
 
     setIsSubmitting(true)
     try {
-      // Clean up empty params/headers
       const cleanedParams = newService.params.filter(p => p.key.trim())
       const cleanedHeaders = newService.headers.filter(h => h.key.trim())
       
       const payload = {
         ...newService,
+        workspaceId: activeWorkspace?.id || null,
         params: cleanedParams.reduce((acc, curr) => ({ ...acc, [curr.key]: curr.value }), {}),
         headers: cleanedHeaders.reduce((acc, curr) => ({ ...acc, [curr.key]: curr.value }), {}),
         isActive: true
@@ -105,68 +118,93 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-background p-6 md:p-10 relative overflow-hidden">
-      <header className="flex flex-col md:flex-row justify-between items-start md:items-start gap-8 mb-16">
-        <div className="space-y-4">
-          <div className="space-y-1">
-            <div className="flex items-center gap-3 text-primary mb-1">
-              <Radar className="w-5 h-5 animate-pulse" />
-              <span className="text-[9px] font-black uppercase tracking-[0.3em]">System Tracking</span>
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      <Navbar onStartTracking={() => setIsAddModalOpen(true)} />
+      
+      <div className="p-6 md:p-10 pt-0">
+        <header className="flex flex-col md:flex-row justify-between items-start md:items-start gap-8 mb-10">
+          <div className="space-y-4">
+            <div className="space-y-1">
+              <div className="flex items-center gap-3 text-primary mb-1">
+                <Radar className="w-5 h-5 animate-pulse" />
+                <span className="text-[9px] font-black uppercase tracking-[0.3em]">
+                  {activeWorkspace ? `Workspace: ${activeWorkspace.name}` : "System Tracking"}
+                </span>
+              </div>
+              <h1 className="text-5xl font-black tracking-tighter text-white leading-none uppercase">
+                {activeWorkspace ? activeWorkspace.name : "MISSION CONTROL"}
+              </h1>
+              <p className="text-muted-foreground text-[10px] uppercase tracking-widest font-bold opacity-40">
+                Fleet Surveillance Protocol: {activeWorkspace ? "Isolated" : "Active"}
+              </p>
             </div>
-            <h1 className="text-5xl font-black tracking-tighter text-white leading-none">MISSION CONTROL</h1>
-            <p className="text-muted-foreground text-[10px] uppercase tracking-widest font-bold opacity-40">Fleet Surveillance Protocol: Active</p>
           </div>
 
-          <button 
-            onClick={() => setIsAddModalOpen(true)}
-            className="group relative flex items-center gap-3 px-8 py-4 bg-zinc-900 text-white border-2 border-primary/10 rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] hover:bg-black hover:text-primary hover:border-primary transition-all duration-300 shadow-[0_0_20px_rgba(20,184,166,0.05)]"
-          >
-            <Plus className="w-4 h-4 relative z-10" />
-            <span className="relative z-10">Start Tracking</span>
-          </button>
-        </div>
-
-        <div className="flex gap-4">
-          <button 
-            onClick={() => setActiveFilter('ALL')}
-            className={`px-8 py-6 rounded-2xl border transition-all duration-300 min-w-[160px] text-left ${activeFilter === 'ALL' ? 'border-primary bg-primary/10 shadow-[0_0_30px_rgba(20,184,166,0.1)]' : 'border-white/5 bg-zinc-900/50 hover:border-white/20'}`}
-          >
-            <p className="text-[10px] text-muted-foreground font-black uppercase tracking-widest mb-1 opacity-40">Total Fleet</p>
-            <p className="text-3xl font-black text-white">{services.length}</p>
-          </button>
-          
-          <button 
-            onClick={() => setActiveFilter('UP')}
-            className={`px-8 py-6 rounded-2xl border transition-all duration-300 min-w-[160px] text-left ${activeFilter === 'UP' ? 'border-green-500 bg-green-500/10 shadow-[0_0_30px_rgba(34,197,94,0.1)]' : 'border-green-500/10 bg-green-500/5 hover:border-green-500/30'}`}
-          >
-            <p className="text-[10px] text-green-500/60 font-black uppercase tracking-widest mb-1">Healthy</p>
-            <p className="text-3xl font-black text-white">{healthy}</p>
-          </button>
-          
-          <button 
-            onClick={() => setActiveFilter('DOWN')}
-            className={`px-8 py-6 rounded-2xl border transition-all duration-300 min-w-[160px] text-left ${activeFilter === 'DOWN' ? 'border-red-500 bg-red-500/10 shadow-[0_0_30px_rgba(239,68,68,0.1)]' : 'border-red-500/10 bg-red-500/5 hover:border-red-500/30'}`}
-          >
-            <p className="text-[10px] text-red-500/60 font-black uppercase tracking-widest mb-1">Incidents</p>
-            <p className="text-3xl font-black text-white">{incidents}</p>
-          </button>
-        </div>
-      </header>
-
-      <main>
-        {services.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-32 border-2 border-dashed border-white/5 rounded-3xl">
-            <Activity className="w-16 h-16 text-muted-foreground/10 mb-6" />
-            <p className="text-muted-foreground font-bold uppercase tracking-[0.3em] text-xs opacity-30">No active telemetry signals detected</p>
+          <div className="flex gap-4">
+            <button 
+              onClick={() => setActiveFilter('ALL')}
+              className={`px-8 py-4 rounded-2xl border transition-all duration-300 min-w-[140px] text-left ${activeFilter === 'ALL' ? 'border-primary bg-primary/10 shadow-[0_0_30px_rgba(20,184,166,0.1)]' : 'border-white/5 bg-zinc-900/50 hover:border-white/20'}`}
+            >
+              <p className="text-[9px] text-muted-foreground font-black uppercase tracking-widest mb-1 opacity-40">Total</p>
+              <p className="text-2xl font-black text-white">{filteredServices.length}</p>
+            </button>
+            
+            <button 
+              onClick={() => setActiveFilter('UP')}
+              className={`px-8 py-4 rounded-2xl border transition-all duration-300 min-w-[140px] text-left ${activeFilter === 'UP' ? 'border-green-500 bg-green-500/10 shadow-[0_0_30px_rgba(34,197,94,0.1)]' : 'border-green-500/10 bg-green-500/5 hover:border-green-500/30'}`}
+            >
+              <p className="text-[9px] text-green-500/60 font-black uppercase tracking-widest mb-1">Healthy</p>
+              <p className="text-2xl font-black text-white">{healthy}</p>
+            </button>
+            
+            <button 
+              onClick={() => setActiveFilter('DOWN')}
+              className={`px-8 py-4 rounded-2xl border transition-all duration-300 min-w-[140px] text-left ${activeFilter === 'DOWN' ? 'border-red-500 bg-red-500/10 shadow-[0_0_30px_rgba(239,68,68,0.1)]' : 'border-red-500/10 bg-red-500/5 hover:border-red-500/30'}`}
+            >
+              <p className="text-[9px] text-red-500/60 font-black uppercase tracking-widest mb-1">Incidents</p>
+              <p className="text-2xl font-black text-white">{incidents}</p>
+            </button>
           </div>
-        ) : (
-          <ServiceGrid 
-            onSelect={setDetailedService} 
-            onEdit={setEditingService} 
-            activeFilter={activeFilter}
-          />
+        </header>
+
+        {!activeWorkspace && workspaces.length > 0 && (
+          <div className="flex flex-row overflow-x-auto gap-4 mb-12 pb-4 no-scrollbar">
+            {workspaces.map((ws) => (
+              <button
+                key={ws.id}
+                onClick={() => dispatch(setActiveWorkspace(ws))}
+                className="flex items-center gap-4 p-6 bg-zinc-900/50 border border-white/5 rounded-2xl min-w-[240px] hover:border-primary/40 hover:bg-zinc-900 transition-all group"
+              >
+                <div className="p-3 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
+                  <Folder className="w-6 h-6" />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-sm font-black text-white uppercase tracking-tight">{ws.name}</h3>
+                  <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest opacity-40">View Workspace</p>
+                </div>
+                <ChevronRight className="w-4 h-4 text-white/10 ml-auto group-hover:text-primary transition-colors" />
+              </button>
+            ))}
+          </div>
         )}
-      </main>
+
+        <main>
+          {filteredServices.length === 0 ? (
+            <div className="flex flex-col items-center justify-center py-32 border-2 border-dashed border-white/5 rounded-3xl">
+              <Activity className="w-16 h-16 text-muted-foreground/10 mb-6" />
+              <p className="text-muted-foreground font-bold uppercase tracking-[0.3em] text-xs opacity-30">
+                {activeWorkspace ? `No signals detected in ${activeWorkspace.name}` : "No active telemetry signals detected"}
+              </p>
+            </div>
+          ) : (
+            <ServiceGrid 
+              onSelect={setDetailedService} 
+              onEdit={setEditingService} 
+              activeFilter={activeFilter}
+            />
+          )}
+        </main>
+      </div>
 
       {/* Add Service Modal */}
       <AnimatePresence>
@@ -191,7 +229,6 @@ export default function Dashboard() {
               className={`bg-zinc-950 border border-white/10 rounded-3xl overflow-hidden relative z-[1010] shadow-[0_0_100px_rgba(0,0,0,0.5)] flex flex-col md:flex-row transition-all duration-500 ${showAdvanced ? 'max-w-6xl w-full' : 'max-w-lg w-full'}`}
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Primary Panel */}
               <div className={`p-8 flex-1 transition-all duration-500 ${showAdvanced ? 'md:border-r border-white/5' : ''}`}>
                 <div className="flex justify-between items-start mb-8">
                   <div className="flex items-center gap-3">
@@ -259,7 +296,6 @@ export default function Dashboard() {
                     />
                   </div>
 
-
                   <div className="space-y-2">
                     <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">Ping Frequency</label>
                     <div className="flex items-center gap-3 bg-black/40 border border-white/5 rounded-xl px-4 py-3">
@@ -288,7 +324,6 @@ export default function Dashboard() {
                 </form>
               </div>
 
-              {/* Advanced Panel */}
               <AnimatePresence>
                 {showAdvanced && (
                   <motion.div 
@@ -312,7 +347,6 @@ export default function Dashboard() {
                       </button>
                     </div>
 
-                    {/* Tabs */}
                     <div className="flex gap-1 p-1 bg-black/40 rounded-xl mb-6 border border-white/5">
                       {[
                         { id: 'PARAMS', icon: ListFilter, label: 'Params' },
@@ -454,14 +488,12 @@ export default function Dashboard() {
         )}
       </AnimatePresence>
 
-      {/* Edit Modal */}
       <EditServiceModal 
         service={editingService} 
         isOpen={!!editingService} 
         onClose={() => setEditingService(null)} 
       />
 
-      {/* Intelligence Modal */}
       <ServiceDetailModal 
         service={detailedService} 
         isOpen={!!detailedService} 

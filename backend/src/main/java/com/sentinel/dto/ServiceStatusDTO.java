@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class ServiceStatusDTO {
     private String id;
+    private String workspaceId;
     private String name;
     private String url;
     private String httpMethod;

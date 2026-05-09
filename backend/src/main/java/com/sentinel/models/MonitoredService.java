@@ -18,6 +18,7 @@ public class MonitoredService {
     @Id
     private String id;
     private String userId;
+    private String workspaceId;
     private String name;
     private String url;
     private boolean isActive;

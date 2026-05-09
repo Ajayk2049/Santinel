@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axiosInstance from '../lib/axiosInstance';
 
-export const fetchServices = createAsyncThunk('fleet/fetchServices', async () => {
-    const url = `/api/services/status`;
+export const fetchServices = createAsyncThunk('fleet/fetchServices', async (workspaceId) => {
+    const url = workspaceId ? `/api/services/status?workspaceId=${workspaceId}` : `/api/services/status`;
     const response = await axiosInstance.get(url);
     return response.data;
 });
@@ -37,14 +37,30 @@ export const fetchIncidents = createAsyncThunk('fleet/fetchIncidents', async ({ 
     return response.data;
 });
 
+export const fetchWorkspaces = createAsyncThunk('fleet/fetchWorkspaces', async () => {
+    const response = await axiosInstance.get('/api/workspaces');
+    return response.data;
+});
+
+export const createWorkspace = createAsyncThunk('fleet/createWorkspace', async (workspaceData) => {
+    const response = await axiosInstance.post('/api/workspaces', workspaceData);
+    return response.data;
+});
+
 const fleetSlice = createSlice({
     name: 'fleet',
     initialState: {
         services: [],
+        workspaces: [],
+        activeWorkspace: null,
         loading: false,
         error: null,
     },
-    reducers: {},
+    reducers: {
+        setActiveWorkspace: (state, action) => {
+            state.activeWorkspace = action.payload;
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchServices.pending, (state) => {
@@ -69,8 +85,15 @@ const fleetSlice = createSlice({
                 if (index !== -1) {
                     state.services[index] = { ...state.services[index], ...action.payload };
                 }
+            })
+            .addCase(fetchWorkspaces.fulfilled, (state, action) => {
+                state.workspaces = action.payload;
+            })
+            .addCase(createWorkspace.fulfilled, (state, action) => {
+                state.workspaces.push(action.payload);
             });
     },
 });
 
+export const { setActiveWorkspace } = fleetSlice.actions;
 export default fleetSlice.reducer;
